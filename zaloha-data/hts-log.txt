@@ -1,0 +1,34 @@
+HTTrack3.50-5 launched on Fri, 16 Oct 2026 13:13:54 at https://teslakatalog.cz/
+(httrack https://teslakatalog.cz/ -O /home/roran/Documents/hugo/tesla-katalog/zaloha-data -r9999 -n -m0 -%C www.teslakatalog.cz=teslakatalog.cz -c4 -%c2 -T30 -R3 -s2 -%P -j1 -I -iC1 -O /home/roran/Documents/hugo/tesla-katalog/zaloha-data -r9999 -n -m0 -%C www.teslakatalog.cz=teslakatalog.cz -c4 -%c2 -T30 -R3 -s2 -%P -j1 -I )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+13:24:17	Error: 	"Forbidden" (403) at link https://www.ferity.cz/files/fonox.pdf (from https://teslakatalog.cz/ke-stazeni.php)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/katalog-telefonnich-elektromagnetickych-vlozek-tesla.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/katalog-telefonnich-elektromagnetickych-vlozek-tesla.pdf (real one is https://teslakatalog.cz/download/katalog-telefonnich-elektromagnetickych-vlozek-tesla.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/oznaceni-vyrobniho-data-na-soucastkach-tesla.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/oznaceni-vyrobniho-data-na-soucastkach-tesla.pdf (real one is https://teslakatalog.cz/download/oznaceni-vyrobniho-data-na-soucastkach-tesla.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/prehled-materialu-znaceni-u-kondenzatoru-tesla.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/prehled-materialu-znaceni-u-kondenzatoru-tesla.pdf (real one is https://teslakatalog.cz/download/prehled-materialu-znaceni-u-kondenzatoru-tesla.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/prehled-otocnych-prepinacu-tesla-wk-533-xx.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/prehled-otocnych-prepinacu-tesla-wk-533-xx.pdf (real one is https://teslakatalog.cz/download/prehled-otocnych-prepinacu-tesla-wk-533-xx.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/prehled-vstupnich-a-linkovych-transformatoru-tesla.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/prehled-vstupnich-a-linkovych-transformatoru-tesla.pdf (real one is https://teslakatalog.cz/download/prehled-vstupnich-a-linkovych-transformatoru-tesla.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/reproduktorove-kombinace-tesla-litovel.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/reproduktorove-kombinace-tesla-litovel.pdf (real one is https://teslakatalog.cz/download/reproduktorove-kombinace-tesla-litovel.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/pristrojove-knofliky-tesla.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/pristrojove-knofliky-tesla.pdf (real one is https://teslakatalog.cz/download/pristrojove-knofliky-tesla.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/tesla_katalog_1_1986_bw.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/tesla_katalog_1_1986_bw.pdf (real one is https://teslakatalog.cz/download/tesla_katalog_1_1986_bw.pdf)
+13:24:17	Warning: 	Moved Permanently for teslakatalog.cz/download/tesla_katalog_1_1986_barev.pdf
+13:24:17	Warning: 	Warning moved treated for teslakatalog.cz/download/tesla_katalog_1_1986_barev.pdf (real one is https://teslakatalog.cz/download/tesla_katalog_1_1986_barev.pdf)
+13:24:17	Info: 	Restarting whole file after error -5 (Error attempting to solve status 206 (partial file)) at link https://teslakatalog.cz/download/tesla_katalog_5_1989_barev.pdf (from https://teslakatalog.cz/ke-stazeni.php)
+13:24:17	Info: 	Restarting whole file after error -5 (Error attempting to solve status 206 (partial file)) at link https://teslakatalog.cz/download/tesla_eltos_1990_barev.pdf (from https://teslakatalog.cz/ke-stazeni.php)
+13:24:17	Info: 	Restarting whole file after error -5 (Error attempting to solve status 206 (partial file)) at link https://teslakatalog.cz/io5/361.jpg (from https://teslakatalog.cz/MH74S201.html)
+
+HTTrack Website Copier/3.50-5 mirror complete in 19 minutes 12 seconds : 4502 links scanned, 4488 files written (2250961402 bytes overall), 1182 files updated [691382758 bytes received at 600158 bytes/sec], 20.4 requests per connection
+(1 errors, 18 warnings, 3 messages)
+(Multipath TCP: 0 HTTP connections negotiated it, 58 fell back to TCP)

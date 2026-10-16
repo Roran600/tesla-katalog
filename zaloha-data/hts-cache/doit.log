@@ -1,0 +1,8 @@
+https://teslakatalog.cz/ -O /home/roran/Documents/hugo/tesla-katalog/zaloha-data -r9999 -n -m0 -%C www.teslakatalog.cz=teslakatalog.cz -c4 -%c2 -T30 -R3 -s2 -%P -j1 -I -iC1 -O /home/roran/Documents/hugo/tesla-katalog/zaloha-data -r9999 -n -m0 -%C www.teslakatalog.cz=teslakatalog.cz -c4 -%c2 -T30 -R3 -s2 -%P -j1 -I
+File generated automatically on Fri, 16 Oct 2026 13:13:54, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
