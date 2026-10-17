@@ -1,0 +1,42 @@
+---
+title: "WK65036A"
+type: "component"
+catalog: "Displeje, LED"
+catalog_id: "WK65036A"
+source_html: "WK65036A.html"
+source_url: "https://teslakatalog.cz/WK65036A.html"
+description: "Katalog součástek - WK65036A"
+keywords:
+  - "katalog"
+  - "list"
+  - "součástka"
+  - "Tesla"
+  - "WK65036A"
+scan_count: 1
+---
+
+# WK65036A
+
+**Katalóg:** [Displeje, LED](<../index.md>)  
+**Označenie:** `WK65036A`
+**Popis:** Katalog součástek - WK65036A
+**Kľúčové slová:** katalog, list, součástka, Tesla, WK65036A
+
+## Obsah
+
+* * *
+
+  
+WK65036A v katalogu součástek 1983:  
+  
+  
+  
+
+
+* * *
+
+## Scany
+
+- [Sken 1 — scan-01.gif](<scan-01.gif>)
+
+![Sken 1](<scan-01.gif>)

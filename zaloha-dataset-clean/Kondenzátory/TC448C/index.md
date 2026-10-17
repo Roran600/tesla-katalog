@@ -1,0 +1,48 @@
+---
+title: "TC448C"
+type: "component"
+catalog: "Kondenzátory"
+catalog_id: "TC448C"
+source_html: "TC448C.html"
+source_url: "https://teslakatalog.cz/TC448C.html"
+description: "Katalog součástek - TC448C"
+keywords:
+  - "katalog"
+  - "list"
+  - "součástka"
+  - "Tesla"
+  - "TC448C"
+scan_count: 2
+---
+
+# TC448C
+
+**Katalóg:** [Kondenzátory](<../index.md>)  
+**Označenie:** `TC448C`
+**Popis:** Katalog součástek - TC448C
+**Kľúčové slová:** katalog, list, součástka, Tesla, TC448C
+
+## Obsah
+
+* * *
+
+  
+TC448C v katalogu součástek 1988:  
+  
+  
+  
+  
+  
+
+
+* * *
+
+## Scany
+
+- [Sken 1 — scan-01.jpg](<scan-01.jpg>)
+
+![Sken 1](<scan-01.jpg>)
+
+- [Sken 2 — scan-02.jpg](<scan-02.jpg>)
+
+![Sken 2](<scan-02.jpg>)

@@ -1,0 +1,18 @@
+---
+title: "IO-8"
+type: "package"
+catalog: "Integrované obvody"
+package_id: "IO-8"
+source_section: "Púzdra IO"
+source_page: 242
+---
+# Púzdro IO-8
+
+**Katalóg:** [Integrované obvody](<../../index.md>)  
+**Pôvod:** Index „Púzdra IO“, strana 242 tlačeného katalógu.
+
+## Sken
+
+[Otvoriť sken](<scan-strana-242.jpg>)
+
+![Púzdro IO-8 — strana 242](<scan-strana-242.jpg>)

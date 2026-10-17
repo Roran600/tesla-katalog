@@ -1,0 +1,42 @@
+---
+title: "MH5472S"
+type: "component"
+catalog: "Integrované obvody"
+catalog_id: "MH5472S"
+source_html: "MH5472S.html"
+source_url: "https://teslakatalog.cz/MH5472S.html"
+description: "Katalog součástek - MH5472S"
+keywords:
+  - "katalog"
+  - "list"
+  - "součástka"
+  - "Tesla"
+  - "MH5472S"
+scan_count: 1
+---
+
+# MH5472S
+
+**Katalóg:** [Integrované obvody](<../index.md>)  
+**Označenie:** `MH5472S`
+**Popis:** Katalog součástek - MH5472S
+**Kľúčové slová:** katalog, list, součástka, Tesla, MH5472S
+
+## Obsah
+
+* * *
+
+  
+MH5472S v katalogu součástek 1983:  
+  
+  
+  
+
+
+* * *
+
+## Scany
+
+- [Sken 1 — scan-01.gif](<scan-01.gif>)
+
+![Sken 1](<scan-01.gif>)

@@ -1,0 +1,42 @@
+---
+title: "SF240"
+type: "component"
+catalog: "Tranzistory"
+catalog_id: "SF240"
+source_html: "SF240.html"
+source_url: "https://teslakatalog.cz/SF240.html"
+description: "Katalog součástek - SF240"
+keywords:
+  - "katalog"
+  - "list"
+  - "součástka"
+  - "Tesla"
+  - "SF240"
+scan_count: 1
+---
+
+# SF240
+
+**Katalóg:** [Tranzistory](<../index.md>)  
+**Označenie:** `SF240`
+**Popis:** Katalog součástek - SF240
+**Kľúčové slová:** katalog, list, součástka, Tesla, SF240
+
+## Obsah
+
+* * *
+
+  
+SF240 v katalogu součástek 1983:  
+  
+  
+  
+
+
+* * *
+
+## Scany
+
+- [Sken 1 — scan-01.gif](<scan-01.gif>)
+
+![Sken 1](<scan-01.gif>)

@@ -1,0 +1,66 @@
+---
+title: "TC354"
+type: "component"
+catalog: "Kondenzátory"
+catalog_id: "TC354"
+source_html: "TC354.html"
+source_url: "https://teslakatalog.cz/TC354.html"
+description: "Katalog součástek - TC354"
+keywords:
+  - "katalog"
+  - "list"
+  - "součástka"
+  - "Tesla"
+  - "TC354"
+scan_count: 5
+---
+
+# TC354
+
+**Katalóg:** [Kondenzátory](<../index.md>)  
+**Označenie:** `TC354`
+**Popis:** Katalog součástek - TC354
+**Kľúčové slová:** katalog, list, součástka, Tesla, TC354
+
+## Obsah
+
+* * *
+
+  
+TC354 v katalogu součástek 1991:  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+* * *
+
+## Scany
+
+- [Sken 1 — scan-01.jpg](<scan-01.jpg>)
+
+![Sken 1](<scan-01.jpg>)
+
+- [Sken 2 — scan-02.jpg](<scan-02.jpg>)
+
+![Sken 2](<scan-02.jpg>)
+
+- [Sken 3 — scan-03.jpg](<scan-03.jpg>)
+
+![Sken 3](<scan-03.jpg>)
+
+- [Sken 4 — scan-04.jpg](<scan-04.jpg>)
+
+![Sken 4](<scan-04.jpg>)
+
+- [Sken 5 — scan-05.jpg](<scan-05.jpg>)
+
+![Sken 5](<scan-05.jpg>)
