@@ -1,0 +1,30 @@
+baseURL = "http://localhost:1411/"
+title = "Tesla katalóg súčiastok"
+theme = "relearn"
+locale = "cs-CZ"
+defaultContentLanguage = "cs"
+disablePathToLower = true
+disableKinds = ["taxonomy", "term", "RSS"]
+enableRobotsTXT = true
+timeout = "300s"
+
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+noClasses = false
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+[outputs]
+home = ["HTML"]
+section = ["HTML"]
+page = ["HTML"]
+
+[params]
+disableLandingPageButton = true
+disableInlineCopyToClipboard = true
+collapsibleMenu = false
+urlExternalCheck = false
+[params.search.adapter]
+identifier = "orama"

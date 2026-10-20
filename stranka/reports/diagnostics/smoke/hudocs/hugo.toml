@@ -1,0 +1,37 @@
+themesDir = "/home/roran/Documents/hugo/tesla-katalog/stranka/hudocs/themes"
+baseURL = "http://localhost:1313/"
+title = "Tesla katalóg súčiastok"
+theme = "hudocs"
+locale = "cs-CZ"
+defaultContentLanguage = "cs"
+disablePathToLower = true
+disableKinds = ["taxonomy", "term", "RSS"]
+enableRobotsTXT = true
+timeout = "300s"
+
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+noClasses = false
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+[outputs]
+home = ["HTML"]
+section = ["HTML"]
+page = ["HTML"]
+
+[params]
+description = "Archív historických elektronických súčiastok Tesla"
+docs_section = "docs"
+docs_versions = false
+docs_ai = false
+docs_chatgpt = false
+docs_claude = false
+footer_copyright = "Tesla katalóg súčiastok"
+
+[[menus.main]]
+name = "Katalóg"
+pageRef = "/docs"
+weight = 1

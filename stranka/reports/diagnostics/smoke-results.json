@@ -1,0 +1,22 @@
+{
+  "relearn": {
+    "exit_code": 0,
+    "seconds": 1.136,
+    "timed_out": false
+  },
+  "book": {
+    "exit_code": 0,
+    "seconds": 0.76,
+    "timed_out": false
+  },
+  "hextra": {
+    "exit_code": 0,
+    "seconds": 1.393,
+    "timed_out": false
+  },
+  "hudocs": {
+    "exit_code": 0,
+    "seconds": 0.768,
+    "timed_out": false
+  }
+}

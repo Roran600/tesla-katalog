@@ -1,0 +1,69 @@
+Start building sites … 
+hugo v0.168.0-e27a6760c5547237f87d353aebe0580feadb20f4+extended linux/amd64 BuildDate=2026-10-13T16:42:50Z VendorInfo=gohugoio
+
+
+Template Metrics:
+
+       cumulative       average       maximum         
+         duration      duration      duration  count  template
+       ----------      --------      --------  -----  --------
+        219.47 ms      54.87 ms      65.86 ms      4  _partials/docs/html-head.html
+        202.34 ms      20.23 ms      28.18 ms     10  _partials/docs/links/resource-precache.html
+        157.77 ms      78.89 ms      84.57 ms      2  list.html
+         85.19 ms      21.30 ms      30.63 ms      4  _partials/docs/html-head-styles.html
+         66.11 ms      66.11 ms      66.11 ms      1  404.html
+         64.26 ms      64.26 ms      64.26 ms      1  single.html
+         36.12 ms      12.04 ms      15.91 ms      3  _partials/docs/header.html
+         27.39 ms       3.04 ms      10.81 ms      9  _partials/docs/icon.html
+         27.05 ms       3.01 ms      10.77 ms      9  _partials/docs/links/iconset.html
+         20.57 ms       6.86 ms      12.59 ms      3  _partials/docs/menu.html
+          9.32 ms       9.32 ms       9.32 ms      1  /search.js
+          8.82 ms       2.20 ms       4.25 ms      4  _partials/schema.html
+          7.46 ms       7.46 ms       7.46 ms      1  /iconset.svg
+          6.95 ms       2.32 ms       6.31 ms      3  _partials/docs/menu-filetree.html
+          6.94 ms     365.12 µs       5.45 ms     19  _partials/docs/title.html
+          5.93 ms     282.60 µs       4.63 ms     21  _partials/docs/text/i18n.html
+          4.74 ms       4.74 ms       4.74 ms      1  /search-data.json
+          3.09 ms     771.47 µs       2.86 ms      4  _partials/docs/html-head-generator.html
+          1.63 ms       1.63 ms       1.63 ms      1  all.txt
+          1.23 ms     306.92 µs       1.11 ms      4  _partials/docs/html-head-favicon.html
+          1.09 ms     272.17 µs       1.08 ms      4  _partials/docs/menu-section-pages.html
+          1.02 ms     339.76 µs     451.96 µs      3  _markup/render-link.html
+        991.65 µs     165.28 µs     226.02 µs      6  _partials/docs/brand.html
+        953.69 µs     317.90 µs     519.94 µs      3  _partials/docs/breadcrumbs.html
+        931.82 µs     310.61 µs     929.92 µs      3  _partials/docs/inject/footer.html
+        854.01 µs     213.50 µs     460.24 µs      4  _partials/docs/html-head-title.html
+        846.67 µs     211.67 µs     291.54 µs      4  _partials/opengraph.html
+        818.25 µs     272.75 µs     403.37 µs      3  _partials/docs/footer.html
+        701.33 µs     116.89 µs     159.88 µs      6  _partials/docs/links/home.html
+        687.36 µs     229.12 µs     287.28 µs      3  _partials/docs/links/portable-link.html
+        682.88 µs     227.63 µs     335.70 µs      3  _partials/docs/prev-next.html
+        486.51 µs     162.17 µs     177.38 µs      3  _partials/docs/search.html
+        455.82 µs      56.98 µs      98.90 µs      8  _partials/_funcs/get-page-images.html
+        426.01 µs      42.60 µs     261.02 µs     10  _partials/docs/menu-section.html
+        347.57 µs     347.57 µs     347.57 µs      1  sitemap.xml
+        185.75 µs      61.92 µs     100.13 µs      3  _partials/docs/toc.html
+        170.00 µs      42.50 µs      89.36 µs      4  _partials/google_analytics.html
+         56.62 µs      56.62 µs      56.62 µs      1  /manifest.json
+         25.51 µs       4.25 µs       5.89 µs      6  _partials/docs/menu-hugo.html
+          4.13 µs       1.03 µs       1.32 µs      4  _partials/docs/inject/head.html
+          4.03 µs       1.34 µs       1.44 µs      3  _partials/docs/inject/menu-before.html
+          3.49 µs     873.00 ns       1.39 µs      4  _partials/docs/inject/body.html
+          3.35 µs       1.11 µs       1.34 µs      3  _partials/docs/inject/content-after.html
+          3.22 µs       1.07 µs       1.15 µs      3  _partials/docs/inject/content-before.html
+          2.56 µs     852.00 ns       1.07 µs      3  _partials/docs/inject/menu-after.html
+          2.13 µs     710.00 ns     800.00 ns      3  _partials/docs/inject/toc-after.html
+          1.81 µs     603.00 ns     752.00 ns      3  _partials/docs/inject/toc-before.html
+
+
+                  │ CS 
+──────────────────┼────
+ Pages            │  6 
+ Paginator pages  │  0 
+ Non-page files   │  0 
+ Static files     │ 69 
+ Processed images │  0 
+ Aliases          │  0 
+ Cleaned          │  0 
+
+Total in 438 ms
