@@ -17,6 +17,7 @@ Nejde ani o hlavný README repozitára; tento dokument vysvetľuje výhradne dat
 
 | Súbor | Účel |
 | --- | --- |
+| [`OBSAH-SUCIASTKY.md`](OBSAH-SUCIASTKY.md) | Čitateľný úplný inventár typov súčiastok podľa kategórií, vrátane dostupných spoločných prehľadov puzdier. Nie je to Hugo obsah. |
 | [`STRUCTURE.md`](STRUCTURE.md) | Prehľad kategórií, počtov súčiastok, záznamov puzdier IO, PDF a skenov. |
 | [`AUDIT_COMPARISON.md`](AUDIT_COMPARISON.md) | Audit zhody HTML zálohy s webom teslakatalog.cz. Netýka sa binárneho obsahu obrázkov ani PDF. |
 | [`MANIFEST.tsv`](MANIFEST.tsv) | Strojovo čitateľný manifest všetkých súborov: cesta, veľkosť v bajtoch a typ. |
