@@ -1,6 +1,0 @@
-Tesla katalóg súčiastok
-
-- Catalog: http://localhost:1313/docs/
-- MA0403: http://localhost:1313/docs/sample/
-
-

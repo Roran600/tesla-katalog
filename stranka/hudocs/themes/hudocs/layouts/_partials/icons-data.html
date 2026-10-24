@@ -1,6 +1,0 @@
-{{- $data := dict -}}
-{{- $url := "https://unpkg.com/meteor-icons@4/exports/icons.json" -}}
-{{- with resources.GetRemote $url -}}
-  {{- $data = . | transform.Unmarshal -}}
-{{- end -}}
-{{- return $data -}}

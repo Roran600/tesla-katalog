@@ -1,4 +1,0 @@
-{{- $class := .Get "class" | default (.Get 0) -}}
-<div class="tabs{{ with $class }} {{ . }}{{ end }}" role="tablist">
-  {{- .Inner -}}
-</div>
