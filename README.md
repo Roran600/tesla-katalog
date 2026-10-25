@@ -8,7 +8,6 @@ Projekt oddeľuje pôvodnú webovú zálohu od vyčisteného, ľahšie prehľad�
 
 | Cesta | Obsah |
 | --- | --- |
-| [`obsah-suciastky.md`](obsah-suciastky.md) | Súhrnný zoznam typov súčiastok podľa kategórií a dostupných prehľadov puzdier. |
 | [`zaloha-data/`](zaloha-data/) | Pôvodná HTTrack záloha webu, vrátane HTML, obrázkov, PDF, cache a logu zrkadlenia. Pozri [README zálohy](zaloha-data/README.md). |
 | [`zaloha-dataset-clean/`](zaloha-dataset-clean/) | Vyčistený a kategorizovaný archívny dataset s Markdown metadátami, skenmi, auditom a manifestom. Pozri [README datasetu](zaloha-dataset-clean/README.md). |
 | [`stranka/`](stranka/) | Priestor vyhradený pre samostatnú prezentačnú stránku projektu. |
