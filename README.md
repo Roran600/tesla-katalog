@@ -26,3 +26,7 @@ Podrobnosti o štruktúre, audite a všetkých súboroch sú v [`zaloha-dataset-
 - Priečinky `zaloha-data/` a `zaloha-dataset-clean/` nie sú Hugo obsah ani samostatné webové aplikácie.
 - `zaloha-data/` je zdrojový archív; pri jeho úpravách môže dôjsť k strate väzby na pôvodnú webovú zálohu.
 - `zaloha-dataset-clean/` je spracovaný dátový balík určený na vyhľadávanie, analýzu a ďalšie spracovanie.
+
+## Autorské práva
+
+Všetky autorské práva patria pôvodným autorom.
