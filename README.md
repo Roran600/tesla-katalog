@@ -1,8 +1,8 @@
 # TESLA katalóg
 
-Archívny projekt pre zachovanie, overovanie a spracovanie obsahu katalógu súčiastok z [teslakatalog.cz](https://teslakatalog.cz/).
+## Cieľ projektu
 
-Projekt oddeľuje pôvodnú webovú zálohu od vyčisteného, ľahšie prehľadávateľného datasetu. Cieľom je zachovať pôvodné zdroje aj vytvoriť spoľahlivý inventár súčiastok, skenov a súvisiacich dokumentov.
+Zálohovať [teslakatalog.cz](https://teslakatalog.cz/) a následne jeho obsah previesť na modernú statickú stránku nezávislú od hostingu.
 
 ## Obsah repozitára
 
