@@ -1,0 +1,12 @@
+/* Farby odvodené od historického znaku Tesla: technická modrá a zlatá hviezda. */
+:root {
+  --primary-hue: 219deg;
+  --primary-saturation: 59%;
+  --primary-lightness: 32%;
+}
+
+.dark {
+  --primary-hue: 43deg;
+  --primary-saturation: 74%;
+  --primary-lightness: 48%;
+}

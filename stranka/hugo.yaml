@@ -36,8 +36,12 @@ menu:
 
 params:
   navbar:
-    displayTitle: true
-    displayLogo: false
+    displayTitle: false
+    displayLogo: true
+    logo:
+      path: images/tesla-cz-logo.svg
+      width: 144
+      height: 40
   theme:
     default: system
     displayToggle: true
