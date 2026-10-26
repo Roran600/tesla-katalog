@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tesla katalóg – Katalóg súčiastok</title>
-    <link>http://localhost:1313/docs/katalog-suciastok/</link>
+    <link>http://localhost:45317/docs/katalog-suciastok/</link>
     <description>Recent content in Katalóg súčiastok on Tesla katalóg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>sk-SK</language>
     
-	  <atom:link href="http://localhost:1313/docs/katalog-suciastok/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:45317/docs/katalog-suciastok/index.xml" rel="self" type="application/rss+xml" />
     
     
       

@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tesla katalóg – Základy</title>
-    <link>http://localhost:1313/docs/zaklady/</link>
+    <link>http://localhost:45317/docs/zaklady/</link>
     <description>Recent content in Základy on Tesla katalóg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>sk-SK</language>
     
-	  <atom:link href="http://localhost:1313/docs/zaklady/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:45317/docs/zaklady/index.xml" rel="self" type="application/rss+xml" />
     
     
       

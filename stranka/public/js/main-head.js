@@ -1,23 +1,19 @@
-// Apply the selected theme before first paint to prevent a color flash.
-function setTheme(theme) {
-  document.documentElement.classList.remove("light", "dark", "gray");
-
-  if (theme !== "light" && theme !== "dark" && theme !== "gray") {
-    theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
-
-  if (theme === "gray") {
-    document.documentElement.classList.add("dark", "gray");
-    document.documentElement.style.colorScheme = "dark";
-  } else {
-    document.documentElement.classList.add(theme);
-    document.documentElement.style.colorScheme = theme;
-  }
-}
-
-setTheme("color-theme" in localStorage ? localStorage.getItem("color-theme") : 'system')
-
-;
 // The section must not be in the banner.js (body) file because it can create a quick flash.
 
 //
+
+;
+// The section must not be in the theme.js (body) file because it can create a quick flash (switch between light and dark).
+
+function setTheme(theme) {
+  document.documentElement.classList.remove("light", "dark");
+
+  if (theme !== "light" && theme !== "dark") {
+    theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  document.documentElement.classList.add(theme);
+  document.documentElement.style.colorScheme = theme;
+}
+
+setTheme("color-theme" in localStorage ? localStorage.getItem("color-theme") : 'system')
