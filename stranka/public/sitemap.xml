@@ -8,6 +8,8 @@
   </url><url>
     <loc>http://localhost:1313/docs/katalog-suciastok/</loc>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
     <loc>http://localhost:1313/blog/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -15,7 +17,5 @@
     <loc>http://localhost:1313/o-stranke/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
   </url>
 </urlset>
