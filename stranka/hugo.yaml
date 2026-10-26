@@ -35,6 +35,19 @@ menu:
         type: search
 
 params:
+  home:
+    badge:
+      text: "Archív československej elektroniky"
+      link: ""
+    headline:
+      firstLine: "Objavujte súčiastky"
+      secondLine: "a dokumentáciu Tesla"
+    subtitle:
+      firstLine: "Prehľadný archív súčiastok a prístrojov"
+      secondLine: "značky Tesla na jednom mieste"
+    cta:
+      text: "Prejsť do dokumentácie"
+      link: "/docs"
   navbar:
     displayTitle: false
     displayLogo: true

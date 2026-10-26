@@ -1,0 +1,31 @@
+{{- $home := .Site.Params.home -}}
+{{- $badge := $home.badge -}}
+{{- $headline := $home.headline -}}
+{{- $subtitle := $home.subtitle -}}
+{{- $cta := $home.cta -}}
+{{- $badgeLink := $badge.link -}}
+{{- $ctaLink := $cta.link -}}
+
+<a{{ with $badgeLink }} href="{{ . | relURL }}"{{ end }} class="not-prose hx:inline-flex hx:items-center hx:rounded-full hx:gap-2 hx:px-3 hx:py-1 hx:text-xs hx:text-gray-600 hx:dark:text-gray-400 hx:bg-gray-100 hx:dark:bg-neutral-800 hx:border-gray-200 hx:dark:border-neutral-800 hx:border hx:hover:border-gray-400 hx:dark:hover:text-gray-50 hx:dark:hover:border-gray-600 hx:transition-all hx:ease-in hx:duration-200">
+  <span class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></span>
+  <span>{{ $badge.text }}</span>
+  {{ partial "utils/icon.html" (dict "name" "arrow-circle-right" "attributes" "height=14") | safeHTML }}
+</a>
+
+<div class="hx:mt-6 hx:mb-6">
+  <h1 class="not-prose hx:text-4xl hx:font-bold hx:leading-none hx:tracking-tighter hx:md:text-5xl hx:py-2 hx:bg-clip-text hx:text-transparent hx:bg-gradient-to-r hx:from-gray-900 hx:to-gray-600 hx:dark:from-gray-100 hx:dark:to-gray-400">
+    {{ $headline.firstLine }}&nbsp;<br class="hx:sm:block hx:hidden" />{{ $headline.secondLine }}
+  </h1>
+</div>
+
+<div class="hx:mb-12">
+  <p class="not-prose hx:text-xl hx:text-gray-600 hx:dark:text-gray-400 hx:sm:text-xl">
+    {{ $subtitle.firstLine }}&nbsp;<br class="hx:sm:block hx:hidden" />{{ $subtitle.secondLine }}
+  </p>
+</div>
+
+<div class="hx:mb-6">
+  <a href="{{ $ctaLink | relURL }}" class="not-prose hx:font-medium hx:cursor-pointer hx:px-6 hx:py-3 hx:rounded-full hx:text-center hx:text-white hx:inline-block hx:bg-primary-600 hx:hover:bg-primary-700 hx:hextra-focus-visible hx:dark:bg-primary-600 hx:dark:hover:bg-primary-700 hx:transition-all hx:ease-in hx:duration-200">
+    {{ $cta.text }}
+  </a>
+</div>
