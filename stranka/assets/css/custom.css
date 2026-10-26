@@ -10,3 +10,26 @@
   --primary-saturation: 74%;
   --primary-lightness: 48%;
 }
+
+/* Sivá téma: tmavý grafit s kontrastom tmavého režimu. */
+html.gray {
+  background: #292d35;
+}
+
+html.gray body,
+html.gray .hextra-sidebar-container,
+html.gray .hextra-scrollbar {
+  background-color: #292d35;
+}
+
+html.gray [class~="hx:bg-neutral-900"] {
+  background-color: #30353e;
+}
+
+html.gray [class~="hx:bg-neutral-800"] {
+  background-color: #393f49;
+}
+
+html.gray [class~="hx:border-neutral-800"] {
+  border-color: #454c57;
+}
