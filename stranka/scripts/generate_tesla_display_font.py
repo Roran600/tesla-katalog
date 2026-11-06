@@ -130,12 +130,13 @@ def draw_letter(letter, outline, width):
         outline.rect(l, CAP - STROKE, r - l, STROKE)
         outline.rect(l, CAP / 2 - STROKE / 2, r - l - STROKE / 2, STROKE)
     elif letter == "G":
-        # A conventional curved bowl, opened at the upper right and crossed once.
-        heavy = 205
+        # Conventional G: flat technical cap, rounded lower bowl and right opening.
+        heavy = 215
         outline.ellipse(mid, CAP / 2, (r - l) / 2, CAP / 2)
         outline.ellipse(mid, CAP / 2, (r - l) / 2 - heavy, CAP / 2 - heavy, hole=True)
-        outline.rect(mid - 70, CAP / 2 - 30, r - mid + 170, 430, hole=True)
-        outline.rect(mid - 20, CAP / 2 - heavy / 2, r - mid + 20, heavy)
+        outline.rect(l + 110, CAP - heavy, r - l - 220, heavy)
+        outline.rect(mid + 100, 470, r - mid + 80, 320, hole=True)
+        outline.rect(mid - 20, 390, r - mid + 20, 200)
     elif letter == "H":
         outline.rect(l, 0, STROKE, CAP)
         outline.rect(r - STROKE, 0, STROKE, CAP)
