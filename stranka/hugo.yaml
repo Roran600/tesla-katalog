@@ -48,6 +48,9 @@ params:
     cta:
       text: "Prejsť do dokumentácie"
       link: "/docs"
+    secondaryCta:
+      text: "Katalóg súčiastok"
+      link: "/docs/katalog-suciastok/"
   navbar:
     displayLogo: true
     logo:
