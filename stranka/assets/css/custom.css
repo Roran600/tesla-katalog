@@ -59,11 +59,11 @@ html.gray [class~="hx:border-neutral-800"] {
 /* Úvodný blok: archívny sken ako protiváha textu, podobne ako na Regolith. */
 .tesla-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: var(--hero-columns, minmax(0, 1fr) minmax(0, 1fr));
   align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: var(--hero-gap, clamp(2rem, 5vw, 5rem));
   width: 100%;
-  padding: clamp(1.5rem, 4vw, 3rem) 0 3.5rem;
+  padding: var(--hero-padding, clamp(1.5rem, 4vw, 3rem) 0 3.5rem);
 }
 
 .tesla-hero-content { padding-top: .1rem; }
@@ -71,22 +71,24 @@ html.gray [class~="hx:border-neutral-800"] {
   display: inline-flex;
   align-items: center;
   gap: .55rem;
-  border: 1px solid #aab6c8;
-  border-radius: 999px;
+  border: 1px solid var(--hero-badge-border, #aab6c8);
+  border-radius: var(--hero-badge-radius, 999px);
   padding: .35rem .8rem;
-  color: #53647b;
+  color: var(--hero-badge-text, #53647b);
+  background: var(--hero-badge-background, transparent);
   font-size: .75rem;
 }
-.tesla-hero-badge > span { width: .5rem; height: .5rem; border-radius: 50%; background: #c49b43; }
+.tesla-hero-badge > span { width: .5rem; height: .5rem; border-radius: 50%; background: var(--hero-badge-dot, #c49b43); }
 .tesla-hero h1 {
   margin: 2rem 0 1.5rem;
-  color: #153a85;
-  font-size: clamp(2.35rem, 4vw, 3.5rem);
+  color: var(--hero-headline, #153a85);
+  font-size: var(--hero-headline-size, clamp(2.35rem, 4vw, 3.5rem));
+  font-family: var(--hero-headline-font, inherit);
   font-weight: 700;
   letter-spacing: -.035em;
   line-height: 1.05;
 }
-.tesla-hero-subtitle { color: #596778; font-size: 1.2rem; line-height: 1.5; }
+.tesla-hero-subtitle { color: var(--hero-subtitle, #596778); font-size: var(--hero-subtitle-size, 1.2rem); line-height: var(--hero-subtitle-line-height, 1.5); }
 .tesla-hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -98,48 +100,42 @@ html.gray [class~="hx:border-neutral-800"] {
   align-items: center;
   justify-content: center;
   gap: .5rem;
-  min-height: 3rem;
+  min-height: var(--hero-button-min-height, 3rem);
   border: 1px solid transparent;
-  border-radius: 999px;
-  padding: .75rem 1.4rem;
-  background: #153a85;
-  color: #fff;
+  border-radius: var(--hero-button-radius, 999px);
+  padding: var(--hero-button-padding, .75rem 1.4rem);
+  background: var(--hero-button-background, #153a85);
+  color: var(--hero-button-text, #fff);
+  font-size: var(--hero-button-font-size, 1rem);
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
   transition: background-color .2s, border-color .2s;
 }
-.tesla-hero-cta:hover { background: #2455a8; }
+.tesla-hero-cta:hover { background: var(--hero-button-hover, #2455a8); }
 .tesla-hero-cta-arrow { width: 1.15rem; height: 1.15rem; flex: none; }
-.tesla-hero-cta-secondary { border-color: #aab6c8; background: transparent; color: #53647b; font-weight: 400; }
-.tesla-hero-cta-secondary:hover { border-color: #153a85; background: #edf2fa; }
+.tesla-hero-cta-secondary { min-height: var(--hero-secondary-min-height, 3rem); border-radius: var(--hero-secondary-radius, 999px); padding: var(--hero-secondary-padding, .75rem 1.4rem); font-size: var(--hero-secondary-font-size, 1rem); border-color: var(--hero-secondary-border, #aab6c8); background: var(--hero-secondary-background, transparent); color: var(--hero-secondary-text, #53647b); font-weight: 400; }
+.tesla-hero-cta-secondary:hover { border-color: var(--hero-secondary-hover-border, #153a85); background: var(--hero-secondary-hover, #edf2fa); }
 .tesla-hero-cta:focus-visible, .tesla-hero-badge:focus-visible { outline: 3px solid #c49b43; outline-offset: 3px; }
 .tesla-hero-visual {
   position: relative;
   margin: 0;
   overflow: hidden;
-  border: 1px solid #d2dbe7;
-  border-radius: 1rem;
-  padding: .65rem;
-  background: #e8eef6;
-  box-shadow: 0 20px 50px rgba(21, 58, 133, .12);
-  aspect-ratio: 5 / 3;
+  border: var(--hero-frame-width, 1px) solid var(--hero-frame-border, #d2dbe7);
+  border-radius: var(--hero-frame-radius, 1rem);
+  padding: var(--hero-frame-padding, .65rem);
+  background: var(--hero-frame-background, #e8eef6);
+  box-shadow: var(--hero-frame-shadow, 0 20px 50px rgba(21, 58, 133, .12));
+  aspect-ratio: var(--hero-image-ratio, 5 / 3);
 }
-.tesla-hero-visual img { width: 100%; height: 100%; border-radius: .5rem; object-fit: cover; object-position: center 25%; }
-.dark .tesla-hero h1 { color: #e3e8f2; }
-.dark .tesla-hero-subtitle { color: #aab4c3; }
-.dark .tesla-hero-badge { color: #bbc4d1; border-color: #596272; }
-.dark .tesla-hero-cta { background: #d4ad55; color: #17243a; }
-.dark .tesla-hero-cta:hover { background: #e6c377; }
-.dark .tesla-hero-cta-secondary { border-color: #697689; background: transparent; color: #bbc6d5; }
-.dark .tesla-hero-cta-secondary:hover { border-color: #d4ad55; background: #303b4c; }
-.dark .tesla-hero-visual { border-color: #48586e; background: #29384d; box-shadow: 0 20px 50px rgba(0, 0, 0, .25); }
-@media (max-width: 767px) {
-  .tesla-hero { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
-  .tesla-hero h1 { margin-top: 1.5rem; }
-  .tesla-hero-desktop-break { display: none; }
-}
-@media (max-width: 480px) {
-  .tesla-hero-cta { width: 100%; }
+.tesla-hero-visual img { width: 100%; height: 100%; border-radius: var(--hero-image-radius, .5rem); object-fit: var(--hero-image-fit, cover); object-position: var(--hero-image-position, center 25%); }
+.dark .tesla-hero {
+  --hero-headline: #e3e8f2; --hero-subtitle: #aab4c3;
+  --hero-badge-text: #bbc4d1; --hero-badge-border: #596272;
+  --hero-button-background: #d4ad55; --hero-button-text: #17243a; --hero-button-hover: #e6c377;
+  --hero-secondary-border: #697689; --hero-secondary-text: #bbc6d5;
+  --hero-secondary-hover-border: #d4ad55; --hero-secondary-hover: #303b4c;
+  --hero-frame-border: #48586e; --hero-frame-background: #29384d;
+  --hero-frame-shadow: 0 20px 50px rgba(0, 0, 0, .25);
 }
 @media (prefers-reduced-motion: reduce) { .tesla-hero-cta { transition: none; } }

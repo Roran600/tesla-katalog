@@ -30,14 +30,12 @@
 
 	<meta itemprop="name" content="Tesla katalóg">
 	<meta itemprop="description" content="Archív československej elektroniky Objavujte súčiastky
-a dokumentáciu Tesla Prehľadný archív súčiastok a prístrojov značky Tesla na jednom mieste
-Prejsť do dokumentácie Katalóg súčiastok">
+a dokumentáciu Tesla Prehľadný archív súčiastok a prístrojov značky Tesla na jednom mieste">
 	<meta itemprop="wordCount" content="23">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Tesla katalóg">
 	<meta name="twitter:description" content="Archív československej elektroniky Objavujte súčiastky
-a dokumentáciu Tesla Prehľadný archív súčiastok a prístrojov značky Tesla na jednom mieste
-Prejsť do dokumentácie Katalóg súčiastok">
+a dokumentáciu Tesla Prehľadný archív súčiastok a prístrojov značky Tesla na jednom mieste">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -232,7 +230,79 @@ Prejsť do dokumentácie Katalóg súčiastok">
       
       <div class="hx:flex hx:flex-col hx:items-start">
         
-        <section class="tesla-hero not-prose" aria-labelledby="tesla-hero-title">
+        
+<style>
+
+.dark .tesla-hero {
+  --hero-badge-background: transparent;
+  --hero-badge-border: #596272;
+  --hero-badge-dot: #c49b43;
+  --hero-badge-text: #bbc4d1;
+  --hero-button-background: #d4ad55;
+  --hero-button-hover: #e6c377;
+  --hero-button-text: #17243a;
+  --hero-frame-background: #29384d;
+  --hero-frame-border: #48586e;
+  --hero-frame-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+  --hero-headline: #e3e8f2;
+  --hero-secondary-background: transparent;
+  --hero-secondary-border: #697689;
+  --hero-secondary-hover: #303b4c;
+  --hero-secondary-hover-border: #d4ad55;
+  --hero-secondary-text: #bbc6d5;
+  --hero-subtitle: #aab4c3;
+}
+
+.tesla-hero {
+  --hero-badge-background: transparent;
+  --hero-badge-border: #aab6c8;
+  --hero-badge-dot: #c49b43;
+  --hero-badge-radius: 999px;
+  --hero-badge-text: #53647b;
+  --hero-button-background: #153a85;
+  --hero-button-font-size: 1rem;
+  --hero-button-hover: #2455a8;
+  --hero-button-min-height: 3rem;
+  --hero-button-padding: .75rem 1.4rem;
+  --hero-button-radius: 999px;
+  --hero-button-text: #ffffff;
+  --hero-columns: minmax(0, 1fr) minmax(0, 1fr);
+  --hero-frame-background: #e8eef6;
+  --hero-frame-border: #d2dbe7;
+  --hero-frame-padding: .65rem;
+  --hero-frame-radius: 1rem;
+  --hero-frame-shadow: 0 20px 50px rgba(21, 58, 133, .12);
+  --hero-frame-width: 1px;
+  --hero-gap: clamp(2rem, 5vw, 5rem);
+  --hero-headline: #153a85;
+  --hero-headline-font: inherit;
+  --hero-headline-size: clamp(2.35rem, 4vw, 3.5rem);
+  --hero-image-fit: cover;
+  --hero-image-position: center 25%;
+  --hero-image-radius: .5rem;
+  --hero-image-ratio: 5 / 3;
+  --hero-mobile-button-width: 100%;
+  --hero-mobile-gap: 2rem;
+  --hero-padding: clamp(1.5rem, 4vw, 3rem) 0 3.5rem;
+  --hero-secondary-background: transparent;
+  --hero-secondary-border: #aab6c8;
+  --hero-secondary-font-size: 1rem;
+  --hero-secondary-hover: #edf2fa;
+  --hero-secondary-hover-border: #153a85;
+  --hero-secondary-min-height: 3rem;
+  --hero-secondary-padding: .75rem 1.4rem;
+  --hero-secondary-radius: 999px;
+  --hero-secondary-text: #53647b;
+  --hero-subtitle: #596778;
+  --hero-subtitle-line-height: 1.5;
+  --hero-subtitle-size: 1.2rem;
+}
+
+@media (max-width: 767px) { .tesla-hero { grid-template-columns: minmax(0, 1fr); gap: var(--hero-mobile-gap, 2rem); } .tesla-hero h1 { margin-top: 1.5rem; } .tesla-hero-desktop-break { display: none; } }
+@media (max-width: 480px) { .tesla-hero-cta { width: var(--hero-mobile-button-width, 100%); } }
+</style>
+
+<section class="tesla-hero not-prose" aria-labelledby="tesla-hero-title">
   <div class="tesla-hero-content">
     
       <span class="tesla-hero-badge"><span aria-hidden="true"></span>Archív československej elektroniky</span>

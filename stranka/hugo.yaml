@@ -1,12 +1,18 @@
+# Základná adresa webu; pri nasadení nastavte verejnú URL.
 baseURL: "http://localhost:1313/"
+# Názov webu používaný v titulkoch a ako záložný názov značky.
 title: "Tesla katalóg"
+# Predvolený jazyk obsahu; false ho ponechá v koreňovej URL, nie pod /sk/.
 defaultContentLanguage: sk
 defaultContentLanguageInSubdir: false
 
+# Pripojenie témy Hextra ako Hugo modulu; verzia je určená v go.mod.
 module:
   imports:
     - path: github.com/imfing/hextra
 
+# Jazyky webu: locale je jazyková lokalizácia, label zobrazovaný názov
+# a weight určuje poradie. Angličtina je zatiaľ vypnutá.
 languages:
   sk:
     locale: sk-SK
@@ -16,8 +22,10 @@ languages:
     locale: en-US
     label: English
     weight: 2
-    disabled: true
+    disabled: true # Aktivácia jazyka automaticky nepreloží obsah.
 
+# Hlavná navigácia: name je text, pageRef odkaz na stránku
+# a weight určuje poradie položiek od najnižšej hodnoty.
 menu:
   main:
     - name: Docs
@@ -32,40 +40,132 @@ menu:
     - name: Hľadať
       weight: 4
       params:
+        # Špeciálna položka vyhľadávania spracovaná témou Hextra.
         type: search
 
+# Parametre využívané témou Hextra a vlastnými šablónami projektu.
 params:
+  # Texty úvodného bloku číta layouts/_shortcodes/tesla-home.html.
   home:
     badge:
+      # Štítok nad nadpisom; prázdny link znamená neklikateľný štítok.
       text: "Archív československej elektroniky"
       link: ""
+    # Dve časti hlavného nadpisu a úvodného textu.
     headline:
       firstLine: "Objavujte súčiastky"
       secondLine: "a dokumentáciu Tesla"
+      # true vloží medzi obe časti pevné zalomenie; false ponechá prirodzené.
+      breakLine: true
     subtitle:
       firstLine: "Prehľadný archív súčiastok a prístrojov"
       secondLine: "značky Tesla na jednom mieste"
+    # Hlavné tlačidlo a jeho cieľová cesta.
     cta:
       text: "Prejsť do dokumentácie"
       link: "/docs"
+    # Druhé tlačidlo a jeho cieľová cesta.
     secondaryCta:
       text: "Katalóg súčiastok"
       link: "/docs/katalog-suciastok/"
+      showArrow: true # Šípka v druhom tlačidle.
+    # Obrázok je v static/; width a height sú skutočné rozmery zdroja v px.
+    image:
+      path: "images/katalog-tr215.jpg"
+      alt: "Sken katalógovej strany s uhlíkovými rezistormi TR 211 až TR 217"
+      width: 960
+      height: 1280
+    # Šírky zlomov v pixeloch: stĺpce a tlačidlá sa pod nimi uložia pod seba.
+    responsive:
+      columnsBreakpoint: 767
+      buttonsBreakpoint: 480
+    # CSS hodnoty uvádzajte ako reťazce vrátane jednotiek. Odstránené položky
+    # používajú pôvodné hodnoty z CSS; farby režimov sú nižšie samostatne.
+    style:
+      columns: "minmax(0, 1fr) minmax(0, 1fr)" # Šírky textu a obrázka.
+      gap: "clamp(2rem, 5vw, 5rem)" # Medzera medzi stĺpcami.
+      mobile-gap: "2rem"
+      padding: "clamp(1.5rem, 4vw, 3rem) 0 3.5rem"
+      headline-size: "clamp(2.35rem, 4vw, 3.5rem)"
+      headline-font: "inherit" # Použite dostupný CSS font alebo zoznam fontov.
+      subtitle-size: "1.2rem"
+      subtitle-line-height: "1.5"
+      badge-radius: "999px"
+      button-radius: "999px"
+      button-padding: ".75rem 1.4rem"
+      button-min-height: "3rem"
+      button-font-size: "1rem"
+      secondary-radius: "999px"
+      secondary-padding: ".75rem 1.4rem"
+      secondary-min-height: "3rem"
+      secondary-font-size: "1rem"
+      mobile-button-width: "100%"
+      image-ratio: "5 / 3"
+      image-fit: "cover" # Napríklad cover alebo contain.
+      image-position: "center 25%"
+      image-radius: ".5rem"
+      frame-width: "1px"
+      frame-radius: "1rem"
+      frame-padding: ".65rem"
+    # Farby a tiene svetlého a tmavého režimu; transparent znamená priehľadné.
+    light:
+      badge-dot: "#c49b43"
+      badge-text: "#53647b"
+      badge-background: "transparent"
+      badge-border: "#aab6c8"
+      headline: "#153a85"
+      subtitle: "#596778"
+      button-background: "#153a85"
+      button-text: "#ffffff"
+      button-hover: "#2455a8"
+      secondary-background: "transparent"
+      secondary-text: "#53647b"
+      secondary-border: "#aab6c8"
+      secondary-hover: "#edf2fa"
+      secondary-hover-border: "#153a85"
+      frame-background: "#e8eef6"
+      frame-border: "#d2dbe7"
+      frame-shadow: "0 20px 50px rgba(21, 58, 133, .12)"
+    dark:
+      badge-dot: "#c49b43"
+      badge-text: "#bbc4d1"
+      badge-background: "transparent"
+      badge-border: "#596272"
+      headline: "#e3e8f2"
+      subtitle: "#aab4c3"
+      button-background: "#d4ad55"
+      button-text: "#17243a"
+      button-hover: "#e6c377"
+      secondary-background: "transparent"
+      secondary-text: "#bbc6d5"
+      secondary-border: "#697689"
+      secondary-hover: "#303b4c"
+      secondary-hover-border: "#d4ad55"
+      frame-background: "#29384d"
+      frame-border: "#48586e"
+      frame-shadow: "0 20px 50px rgba(0, 0, 0, .25)"
+  # Hlavička: logo sa načíta zo static/; rozmery sú v pixeloch.
   navbar:
+    # Pozor: vlastná šablóna používa default true, preto false logo nevypne.
     displayLogo: true
     logo:
       path: images/tesla-emblem.svg
       width: 40
       height: 40
+    # Text značky vedľa loga používaný vlastnou šablónou hlavičky.
     brand:
       text: "Tesla katalóg"
+  # Predvolený farebný režim podľa systému a zobrazenie jeho prepínača.
   theme:
     default: system
     displayToggle: true
 
+# Spracovanie Markdownu a zvýrazňovanie blokov kódu.
 markup:
   goldmark:
     renderer:
+      # Povolí HTML v Markdownu; obsah preto musí byť dôveryhodný.
       unsafe: true
   highlight:
+    # false používa CSS triedy na zvýraznenie syntaxe namiesto inline štýlov.
     noClasses: false
