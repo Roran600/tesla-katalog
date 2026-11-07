@@ -5,6 +5,15 @@
 {{- $logoDarkPath := .Site.Params.navbar.logo.dark | default $logoPath -}}
 {{- $brandText := .Site.Params.navbar.brand.text | default .Site.Title -}}
 
+<style>
+  @font-face {
+    font-family: "Tesla Katalog Display";
+    src: url("{{ "fonts/tesla-katalog-display.woff2" | relURL }}") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+  }
+</style>
 <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="{{ $logoLink }}">
   {{- if (.Site.Params.navbar.displayLogo | default true) }}
     <img class="hx:mr-2 hx:block hx:dark:hidden" src="{{ $logoPath | relURL }}" alt="{{ $brandText }}" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />

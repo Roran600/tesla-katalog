@@ -5,15 +5,7 @@
   --primary-lightness: 32%;
 }
 
-@font-face {
-  font-family: "Tesla Katalog Display";
-  src: url("/fonts/tesla-katalog-display.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-}
-
-/* T/E/S/L/A sú odvodené priamo z pôvodného loga; zvyšok tvorí latinka. */
+/* Font načítava šablóna hlavičky pomocou cesty vzhľadom na Hugo baseURL. */
 .tesla-navbar-brand {
   color: #153a85;
   font-family: "Tesla Katalog Display", sans-serif;

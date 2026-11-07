@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Build Tesla Katalóg Display, a new alphabet inspired by the TESLA wordmark.
+"""Build the display font from font-sources/tesla-slovak-uppercase-vector.svg.
 
-The historic logo only documents T/E/S/L/A.  This script preserves those five
-outlines exactly and draws the remaining Latin uppercase alphabet, figures,
-punctuation and Czech/Slovak accents as a compatible contemporary extension.
-It does not claim to reconstruct a historical TESLA typeface.
+Lowercase Unicode characters intentionally map to uppercase outlines. Digits,
+punctuation and the additional Czech accents are drawn by this script.
 """
 
 from math import ceil
 from pathlib import Path
+import shutil
+import subprocess
+import tempfile
 import xml.etree.ElementTree as ET
 
 from fontTools.fontBuilder import FontBuilder
@@ -21,14 +22,18 @@ from fontTools.svgLib.path import parse_path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LOGO = ROOT / "static/images/tesla-cz-logo.svg"
+SOURCE = ROOT / "font-sources/tesla-slovak-uppercase-vector.svg"
 OUTPUT = ROOT / "static/fonts/tesla-katalog-display.ttf"
 UPM = 1000
 CAP = 1000
 STROKE = 170
 SIDE = 55
 KAPPA = 0.55228475
-EXACT_LOGO_GLYPHS = {"T": (0,), "E": (1,), "S": (2,), "L": (3,), "A": (4, 5)}
+# IDs are source glyph groups, not their position in the laid-out SVG sheet.
+SOURCE_ALPHABET = (
+    "A Á Ä B C Č D Ď E É F G H I Í J K L Ĺ Ľ M N Ň O Ó Ô "
+    "P Q R Ŕ S Š T Ť U Ú V W X Y Ý Z Ž"
+).split()
 
 
 class Outline:
@@ -52,7 +57,7 @@ class Outline:
         dx, dy = x2 - x1, y2 - y1
         length = (dx * dx + dy * dy) ** 0.5
         px, py = -dy * width / (2 * length), dx * width / (2 * length)
-        self.polygon([(x1 + px, y1 + py), (x2 + px, y2 + py), (x2 - px, y2 - py), (x1 - px, y1 - py)])
+        self.polygon([(x1 - px, y1 - py), (x2 - px, y2 - py), (x2 + px, y2 + py), (x1 + px, y1 + py)])
 
     def ellipse(self, cx, cy, rx, ry, hole=False):
         # The two contours use opposite winding directions, as required by TTF.
@@ -253,50 +258,40 @@ def generic_glyph(character):
     width = widths.get(character, 760)
     if character == " ":
         return simple(width)
-    if character in "TESLA":
-        return exact_logo_glyph(character)
+    if character in "08":
+        return SOURCE_GLYPHS[{"0": "O", "8": "B"}[character]]
     return simple(width, lambda outline, glyph_width: draw_letter(character, outline, glyph_width))
 
 
-def exact_logo_glyphs():
-    namespace = {"svg": "http://www.w3.org/2000/svg"}
-    root = ET.parse(LOGO).getroot()
-    wordmark = root.find('.//svg:path[@id="path248"]', namespace)
-    recording = RecordingPen()
-    parse_path(wordmark.attrib["d"], recording)
-    contours, contour = [], []
-    for command in recording.value:
-        if command[0] == "moveTo" and contour:
-            contours.append(contour)
-            contour = []
-        contour.append(command)
-    contours.append(contour)
+def source_glyphs():
+    """Import letter-local paths; group transforms only lay out the SVG sheet.
 
+    The source uses consistent 100-unit cap height and even-odd contours with
+    opposite winding for its counters. Fail rather than silently misreading a
+    structurally changed source, including nested transforms or SVG use nodes.
+    """
+    root = ET.parse(SOURCE).getroot()
     result = {}
-    for character, indexes in EXACT_LOGO_GLYPHS.items():
-        selected = [contours[index] for index in indexes]
-        bounds_pen = BoundsPen(None)
-        for contour in selected:
-            for operator, operands in contour:
-                getattr(bounds_pen, operator)(*operands)
-        x_min, _, x_max, _ = bounds_pen.bounds
+    for index, character in enumerate(SOURCE_ALPHABET, 1):
+        group = root.find(f'.//*[@id="glyph-{index}"]')
+        if group is None or not group.get("transform", "").endswith("scale(0.7)"):
+            raise ValueError(f"Unexpected source group for {character}: glyph-{index}")
+        paths = list(group)
+        if not paths or any(p.tag != "{http://www.w3.org/2000/svg}path" or p.get("transform") for p in paths):
+            raise ValueError(f"Unexpected nested SVG structure in glyph-{index}")
+        recording = RecordingPen()
+        for path in paths:
+            parse_path(path.attrib["d"], recording)
+        bounds = BoundsPen(None)
+        recording.replay(bounds)
+        if bounds.bounds is None:
+            raise ValueError(f"Empty glyph for {character}")
+        x_min, _, x_max, _ = bounds.bounds
         pen = TTGlyphPen(None)
-        transformed = TransformPen(Cu2QuPen(pen, max_err=1), (40, 0, 0, -40, -x_min * 40 + SIDE, 187.65 * 40))
-        for contour in selected:
-            for operator, operands in contour:
-                getattr(transformed, operator)(*operands)
-        result[character] = (pen.glyph(), ceil((x_max - x_min) * 40 + 2 * SIDE))
+        transformed = TransformPen(Cu2QuPen(pen, max_err=1), (10, 0, 0, -10, SIDE - x_min * 10, 1000))
+        recording.replay(transformed)
+        result[character] = (pen.glyph(), ceil((x_max - x_min) * 10 + 2 * SIDE))
     return result
-
-
-_exact = None
-
-
-def exact_logo_glyph(character):
-    global _exact
-    if _exact is None:
-        _exact = exact_logo_glyphs()
-    return _exact[character]
 
 
 def accented_glyph(base, accent):
@@ -304,7 +299,11 @@ def accented_glyph(base, accent):
     outline = Outline()
     # Accented forms use the same new construction, leaving exact archival
     # contours untouched for the unaccented TESLA logotype.
-    draw_letter(base, outline, width)
+    # Used only for Czech forms absent from the SVG; reuse its base outline.
+    source, width = SOURCE_GLYPHS[base]
+    recording = RecordingPen()
+    source.draw(recording, None)
+    recording.replay(outline.pen)
     center = width / 2
     if accent == "acute":
         outline.polygon([
@@ -352,14 +351,13 @@ def punctuation(character):
 
 
 def main():
+    global SOURCE_GLYPHS
+    SOURCE_GLYPHS = source_glyphs()
+    compressor = shutil.which("woff2_compress")
+    if not compressor:
+        raise SystemExit("Missing woff2_compress; install the WOFF2 tools before generating fonts.")
     characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:-/?"
-    accents = {
-        "Á": ("A", "acute"), "Ä": ("A", "umlaut"), "Č": ("C", "caron"), "Ď": ("D", "caron"),
-        "É": ("E", "acute"), "Ě": ("E", "caron"), "Í": ("I", "acute"), "Ĺ": ("L", "acute"),
-        "Ľ": ("L", "caron"), "Ň": ("N", "caron"), "Ó": ("O", "acute"), "Ô": ("O", "circumflex"),
-        "Ŕ": ("R", "acute"), "Ř": ("R", "caron"), "Š": ("S", "caron"), "Ť": ("T", "caron"),
-        "Ú": ("U", "acute"), "Ů": ("U", "ring"), "Ý": ("Y", "acute"), "Ž": ("Z", "caron"),
-    }
+    accents = {"Ě": ("E", "caron"), "Ř": ("R", "caron"), "Ů": ("U", "ring")}
 
     glyphs = {".notdef": simple(760, lambda outline, width: (outline.rect(50, 50, width - 100, 900), outline.rect(170, 170, width - 340, 660, hole=True)))[0]}
     metrics = {".notdef": (760, 0)}
@@ -367,12 +365,20 @@ def main():
 
     for character in characters:
         name = "space" if character == " " else f"uni{ord(character):04X}"
-        glyph, width = generic_glyph(character) if character.isalnum() or character == " " else punctuation(character)
+        glyph, width = SOURCE_GLYPHS[character] if character in SOURCE_GLYPHS else (generic_glyph(character) if character.isalnum() or character == " " else punctuation(character))
         glyphs[name] = glyph
         metrics[name] = (width, 0)
         cmap[ord(character)] = name
         if character.isalpha():
             cmap[ord(character.lower())] = name
+
+    for character in SOURCE_ALPHABET:
+        if character in characters:
+            continue
+        name = f"uni{ord(character):04X}"
+        glyph, width = SOURCE_GLYPHS[character]
+        glyphs[name], metrics[name] = glyph, (width, 0)
+        cmap[ord(character)] = cmap[ord(character.lower())] = name
 
     for character, (base, accent) in accents.items():
         name = f"uni{ord(character):04X}"
@@ -400,7 +406,16 @@ def main():
     font.setupOS2(sTypoAscender=1450, sTypoDescender=-250, usWinAscent=1450, usWinDescent=250, usWeightClass=700)
     font.setupPost()
     font.setupMaxp()
-    font.save(OUTPUT)
+    # Fixed timestamps keep repeated builds reproducible.
+    font.font.recalcTimestamp = False
+    font.font["head"].created = font.font["head"].modified = 2082844800
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".font-build-", dir=OUTPUT.parent) as tmp:
+        staged = Path(tmp) / OUTPUT.name
+        font.save(staged)
+        subprocess.run([compressor, str(staged)], check=True)
+        shutil.copyfile(staged, OUTPUT)
+        shutil.copyfile(staged.with_suffix(".woff2"), OUTPUT.with_suffix(".woff2"))
 
 
 if __name__ == "__main__":
