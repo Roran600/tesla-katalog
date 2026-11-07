@@ -19,6 +19,55 @@ zostavení napríklad pomocou `hugo --baseURL https://example.org/tesla/`.
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,
 FontTools ani nástroje WOFF2 preto na bežný Hugo build nie sú potrebné.
 
+## Nastavenie úvodnej stránky
+
+Súbor `content/_index.md` používa layout Hextra `hextra-home` a vkladá vlastný
+shortcode `tesla-home`. Jeho šablóna je v `layouts/_shortcodes/tesla-home.html`.
+Obsah a vzhľad úvodného bloku sa nastavujú v `hugo.yaml` pod `params.home`:
+
+- `badge`, `headline` a `subtitle` určujú štítok, nadpis a podnadpis.
+  Prázdny odkaz štítku ho ponechá neklikateľný; `headline.breakLine` zapína
+  pevné zalomenie nadpisu medzi jeho dvoma časťami.
+- `cta` a `secondaryCta` určujú text a cieľ oboch tlačidiel.
+  `secondaryCta.showArrow` zapína šípku druhého tlačidla.
+- `image` určuje cestu k obrázku, alternatívny text a rozmery zdrojového
+  súboru v pixeloch. Obrázok musí byť dostupný v `static/`.
+- `responsive` určuje šírky zlomov v pixeloch pre stĺpce a tlačidlá.
+- `style` obsahuje CSS hodnoty rozloženia, typografie, tlačidiel, obrázka a
+  jeho rámu. Hodnoty zapisujte ako reťazce vrátane potrebných CSS jednotiek.
+- `light` a `dark` nastavujú farby a tieň zvlášť pre svetlý a tmavý režim.
+
+Jednotlivé možnosti sú okomentované priamo v `hugo.yaml`. Predvolené hodnoty
+vzhľadu pri vynechaní položiek sú v `assets/css/custom.css`; predvolené
+hodnoty obrázka a šírok zlomov sú v šablóne shortcode.
+
+### Výmena obrázka
+
+Uložte obrázok napríklad ako `static/images/novy-obrazok.jpg` a v existujúcej
+časti `params.home` upravte:
+
+```yaml
+image:
+  path: "images/novy-obrazok.jpg" # Cesta vzhľadom na static/.
+  alt: "Opis obsahu obrázka"
+  width: 1200  # Skutočná šírka zdrojového súboru v pixeloch.
+  height: 800  # Skutočná výška zdrojového súboru v pixeloch.
+```
+
+Výrez možno upraviť cez `style.image-ratio`, `style.image-fit` a
+`style.image-position`. Po zmene skontrolujte čitateľnosť, svetlý aj tmavý
+režim a rozloženie na veľkej aj malej obrazovke. Správanie pri nasadení do
+podpriečinka overíte zostavením napríklad takto:
+
+```sh
+hugo --baseURL https://example.org/tesla/ --destination /tmp/opencode/tesla-site-check
+```
+
+Vo výslednej stránke skontrolujte, že odkazy aj obrázok používajú prefix
+`/tesla/`. Adresár `/tmp/opencode` je určený pre toto vývojové prostredie;
+inde použite vhodný dočasný cieľový adresár. Tento príkaz nemení nastavenú
+`baseURL` v `hugo.yaml`.
+
 ## Font hlavičky
 
 Zdrojom veľkých písmen fontu je `font-sources/tesla-slovak-uppercase-vector.svg`.

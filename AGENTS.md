@@ -16,6 +16,8 @@
 
 - PDFs are tracked through Git LFS (`.gitattributes`); do not replace them with ordinary Git blobs.
 - The site can be built with `hugo` or previewed with `hugo server` from `stranka/`. Hugo and Go are required; resolving its Hextra module may require network access.
+- The home page uses Hextra's `hextra-home` layout and the project shortcode `stranka/layouts/_shortcodes/tesla-home.html`. Its content, image, responsive breakpoints and light/dark styling are configured under `params.home` in `stranka/hugo.yaml`; CSS defaults and styling live in `stranka/assets/css/custom.css`. Keep these in sync when changing the home page.
+- Home-page images must remain inside `stranka/static/`; image paths are relative to that directory and must work when the site is deployed under a URL subpath. Check desktop and mobile layouts and both color modes when changing the design. Test configurable defaults and explicit `false` values when changing the shortcode.
 - The header uses the pre-generated `stranka/static/fonts/tesla-katalog-display.woff2`; normal Hugo builds do not regenerate the font and do not require Python or WOFF2 tools.
 - The font source of truth for this site is `stranka/font-sources/tesla-slovak-uppercase-vector.svg`; it is a separate working copy of the artwork in `grafika/`, not automatically synchronized. If the source or generator changes, run `python3 scripts/generate_tesla_display_font.py` and `python3 scripts/test_tesla_display_font.py` from `stranka/`, then visually verify the output. Generation requires Python, FontTools and `woff2_compress`; tests also require `woff2_decompress`.
 - For documentation-only changes, run `git diff --check`.
