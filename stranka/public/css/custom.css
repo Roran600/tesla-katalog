@@ -55,3 +55,77 @@ html.gray [class~="hx:bg-neutral-800"] {
 html.gray [class~="hx:border-neutral-800"] {
   border-color: #454c57;
 }
+
+/* Úvodný blok: archívny sken ako protiváha textu, podobne ako na Regolith. */
+.tesla-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 5rem);
+  width: 100%;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 3rem;
+}
+
+.tesla-hero-content { padding-top: .1rem; }
+.tesla-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  border: 1px solid #aab6c8;
+  border-radius: 999px;
+  padding: .35rem .8rem;
+  color: #53647b;
+  font-size: .75rem;
+}
+.tesla-hero-badge > span { width: .5rem; height: .5rem; border-radius: 50%; background: #c49b43; }
+.tesla-hero h1 {
+  margin: 2rem 0 1.5rem;
+  color: #153a85;
+  font-size: clamp(2.35rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+}
+.tesla-hero-subtitle { color: #596778; font-size: 1.2rem; line-height: 1.5; }
+.tesla-hero-cta {
+  display: inline-block;
+  margin-top: 1.75rem;
+  border-radius: 999px;
+  padding: .85rem 1.5rem;
+  background: #153a85;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color .2s;
+}
+.tesla-hero-cta:hover { background: #2455a8; }
+.tesla-hero-cta:focus-visible, .tesla-hero-badge:focus-visible { outline: 3px solid #c49b43; outline-offset: 3px; }
+.tesla-hero-visual {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #24354d;
+  aspect-ratio: 5 / 3;
+}
+.tesla-hero-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+.tesla-hero-visual figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .6rem .9rem;
+  background: rgba(21, 34, 52, .9);
+  color: #fff;
+  font-size: .75rem;
+  letter-spacing: .02em;
+}
+.dark .tesla-hero h1 { color: #e3e8f2; }
+.dark .tesla-hero-subtitle { color: #aab4c3; }
+.dark .tesla-hero-badge { color: #bbc4d1; border-color: #596272; }
+.dark .tesla-hero-cta { background: #d4ad55; color: #17243a; }
+.dark .tesla-hero-cta:hover { background: #e6c377; }
+@media (max-width: 767px) {
+  .tesla-hero { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .tesla-hero h1 { margin-top: 1.5rem; }
+  .tesla-hero-desktop-break { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .tesla-hero-cta { transition: none; } }
