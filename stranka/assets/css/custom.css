@@ -1,13 +1,73 @@
-/* Farby odvodené od historického znaku Tesla: technická modrá a zlatá hviezda. */
+/* Jednotná modrá paleta pre Hextra aj vlastné prvky stránky. */
 :root {
-  --primary-hue: 219deg;
-  --primary-saturation: 59%;
-  --primary-lightness: 32%;
+  --primary-hue: 213deg;
+  --primary-saturation: 73%;
+  --primary-lightness: 33%;
+  --tesla-bg: #f1f6fc;
+  --tesla-panel: #e2edf9;
+  --tesla-text: #142d50;
+  --tesla-muted: #355477;
+  --tesla-accent: #174d92;
+  --tesla-hover: #10386c;
+  --tesla-border: #56789d;
+  --hx-color-white: #f1f6fc;
+  --hx-color-black: #142840;
+  --hx-color-dark: #142840;
+  --hx-color-gray-50: #f1f6fc;
+  --hx-color-gray-100: #e2edf9;
+  --hx-color-gray-200: #c9daee;
+  --hx-color-gray-300: #b0c9e6;
+  --hx-color-gray-400: #b0c9e6;
+  --hx-color-gray-500: #355477;
+  --hx-color-gray-600: #355477;
+  --hx-color-gray-700: #294867;
+  --hx-color-gray-800: #203c5c;
+  --hx-color-gray-900: #142d50;
+  --hx-color-neutral-50: #f1f6fc;
+  --hx-color-neutral-200: #c9daee;
+  --hx-color-neutral-300: #b0c9e6;
+  --hx-color-neutral-400: #b0c9e6;
+  --hx-color-neutral-500: #355477;
+  --hx-color-neutral-600: #355477;
+  --hx-color-neutral-700: #294867;
+  --hx-color-neutral-800: #203c5c;
+  --hx-color-neutral-900: #203c5c;
 }
+
+.dark {
+  --primary-hue: 213deg;
+  --primary-saturation: 100%;
+  --primary-lightness: 83%;
+  --tesla-bg: #142840;
+  --tesla-panel: #203c5c;
+  --tesla-text: #e2edfa;
+  --tesla-muted: #b0c9e6;
+  --tesla-accent: #a9d0ff;
+  --tesla-hover: #d4e8ff;
+  --tesla-border: #789cc4;
+}
+
+html, body { background-color: var(--tesla-bg); color: var(--tesla-text); }
+/* Hextra nastavuje tmavé pozadie hlavičky pomocou !important. */
+.hextra-nav-container-blur { background-color: var(--tesla-panel) !important; }
+.hextra-footer { background: var(--tesla-panel); }
+.hextra-nav-container-blur { border-bottom: 1px solid var(--tesla-border); }
+.hextra-footer { border-top: 1px solid var(--tesla-border); }
+.hextra-sidebar-container, .hextra-scrollbar { background-color: var(--tesla-bg); }
+.hextra-sidebar-item a, .hextra-nav-container nav > a:not(:first-child),
+.hextra-search-trigger, .hextra-footer { color: var(--tesla-muted); }
+.hextra-sidebar-item a:hover, .hextra-nav-container nav > a:not(:first-child):hover { color: var(--tesla-hover); background-color: var(--tesla-panel); }
+.hextra-sidebar-item .hextra-sidebar-active-item { color: var(--tesla-accent); background-color: var(--tesla-panel); text-decoration: underline; text-underline-offset: .2em; }
+.hextra-search-trigger-kbd, .dark .hextra-search-trigger-kbd { color: var(--tesla-muted); border-color: var(--tesla-border); }
+.hextra-search-dialog { border-color: var(--tesla-border); }
+main :is(h1, h2, h3, h4, h5, h6), .content :is(h1, h2, h3, h4, h5, h6) { color: var(--tesla-text); }
+.content a, .hextra-content a { color: var(--tesla-accent); text-decoration: underline; text-underline-offset: .2em; }
+.content a:hover, .hextra-content a:hover { color: var(--tesla-hover); }
+:focus-visible { outline: 3px solid var(--tesla-accent); outline-offset: 3px; }
 
 /* Font načítava šablóna hlavičky pomocou cesty vzhľadom na Hugo baseURL. */
 .tesla-navbar-brand {
-  color: #153a85;
+  color: var(--tesla-accent);
   font-family: "Tesla Katalog Display", sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
@@ -16,8 +76,9 @@
   text-transform: uppercase;
 }
 
-.dark .tesla-navbar-brand {
-  color: hsl(43deg 74% 56%);
+/* Zachováme pôvodnú kresbu loga; v nočnom režime ju zosvetlíme. */
+.dark .hextra-nav-container img[src*="tesla-emblem.svg"] {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(16%) saturate(947%) hue-rotate(183deg) brightness(106%) contrast(101%);
 }
 
 @media (max-width: 48rem) {
@@ -25,35 +86,6 @@
     font-size: 0.65rem;
     white-space: nowrap;
   }
-}
-
-.dark {
-  --primary-hue: 43deg;
-  --primary-saturation: 74%;
-  --primary-lightness: 48%;
-}
-
-/* Sivá téma: tmavý grafit s kontrastom tmavého režimu. */
-html.gray {
-  background: #292d35;
-}
-
-html.gray body,
-html.gray .hextra-sidebar-container,
-html.gray .hextra-scrollbar {
-  background-color: #292d35;
-}
-
-html.gray [class~="hx:bg-neutral-900"] {
-  background-color: #30353e;
-}
-
-html.gray [class~="hx:bg-neutral-800"] {
-  background-color: #393f49;
-}
-
-html.gray [class~="hx:border-neutral-800"] {
-  border-color: #454c57;
 }
 
 /* Úvodný blok: archívny sken ako protiváha textu, podobne ako na Regolith. */
@@ -71,24 +103,24 @@ html.gray [class~="hx:border-neutral-800"] {
   display: inline-flex;
   align-items: center;
   gap: .55rem;
-  border: 1px solid var(--hero-badge-border, #aab6c8);
+  border: 1px solid var(--hero-badge-border, #56789d);
   border-radius: var(--hero-badge-radius, 999px);
   padding: .35rem .8rem;
-  color: var(--hero-badge-text, #53647b);
+  color: var(--hero-badge-text, #355477);
   background: var(--hero-badge-background, transparent);
   font-size: .75rem;
 }
-.tesla-hero-badge > span { width: .5rem; height: .5rem; border-radius: 50%; background: var(--hero-badge-dot, #c49b43); }
+.tesla-hero-badge > span { width: .5rem; height: .5rem; border-radius: 50%; background: var(--hero-badge-dot, #174d92); }
 .tesla-hero h1 {
   margin: 2rem 0 1.5rem;
-  color: var(--hero-headline, #153a85);
+  color: var(--hero-headline, #142d50);
   font-size: var(--hero-headline-size, clamp(2.35rem, 4vw, 3.5rem));
   font-family: var(--hero-headline-font, inherit);
   font-weight: 700;
   letter-spacing: -.035em;
   line-height: 1.05;
 }
-.tesla-hero-subtitle { color: var(--hero-subtitle, #596778); font-size: var(--hero-subtitle-size, 1.2rem); line-height: var(--hero-subtitle-line-height, 1.5); }
+.tesla-hero-subtitle { color: var(--hero-subtitle, #355477); font-size: var(--hero-subtitle-size, 1.2rem); line-height: var(--hero-subtitle-line-height, 1.5); }
 .tesla-hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -104,38 +136,38 @@ html.gray [class~="hx:border-neutral-800"] {
   border: 1px solid transparent;
   border-radius: var(--hero-button-radius, 999px);
   padding: var(--hero-button-padding, .75rem 1.4rem);
-  background: var(--hero-button-background, #153a85);
-  color: var(--hero-button-text, #fff);
+  background: var(--hero-button-background, #174d92);
+  color: var(--hero-button-text, #f1f6fc);
   font-size: var(--hero-button-font-size, 1rem);
   font-weight: 600;
   line-height: 1.3;
   text-align: center;
   transition: background-color .2s, border-color .2s;
 }
-.tesla-hero-cta:hover { background: var(--hero-button-hover, #2455a8); }
+.tesla-hero-cta:hover { background: var(--hero-button-hover, #10386c); }
 .tesla-hero-cta-arrow { width: 1.15rem; height: 1.15rem; flex: none; }
-.tesla-hero-cta-secondary { min-height: var(--hero-secondary-min-height, 3rem); border-radius: var(--hero-secondary-radius, 999px); padding: var(--hero-secondary-padding, .75rem 1.4rem); font-size: var(--hero-secondary-font-size, 1rem); border-color: var(--hero-secondary-border, #aab6c8); background: var(--hero-secondary-background, transparent); color: var(--hero-secondary-text, #53647b); font-weight: 400; }
-.tesla-hero-cta-secondary:hover { border-color: var(--hero-secondary-hover-border, #153a85); background: var(--hero-secondary-hover, #edf2fa); }
-.tesla-hero-cta:focus-visible, .tesla-hero-badge:focus-visible { outline: 3px solid #c49b43; outline-offset: 3px; }
+.tesla-hero-cta-secondary { min-height: var(--hero-secondary-min-height, 3rem); border-radius: var(--hero-secondary-radius, 999px); padding: var(--hero-secondary-padding, .75rem 1.4rem); font-size: var(--hero-secondary-font-size, 1rem); border-color: var(--hero-secondary-border, #56789d); background: var(--hero-secondary-background, transparent); color: var(--hero-secondary-text, #174d92); font-weight: 400; }
+.tesla-hero-cta-secondary:hover { border-color: var(--hero-secondary-hover-border, #10386c); background: var(--hero-secondary-hover, #e2edf9); color: var(--tesla-hover); }
+.tesla-hero-cta:focus-visible, .tesla-hero-badge:focus-visible { outline: 3px solid var(--tesla-accent); outline-offset: 3px; }
 .tesla-hero-visual {
   position: relative;
   margin: 0;
   overflow: hidden;
-  border: var(--hero-frame-width, 1px) solid var(--hero-frame-border, #d2dbe7);
+  border: var(--hero-frame-width, 1px) solid var(--hero-frame-border, #56789d);
   border-radius: var(--hero-frame-radius, 1rem);
   padding: var(--hero-frame-padding, .65rem);
-  background: var(--hero-frame-background, #e8eef6);
+  background: var(--hero-frame-background, #e2edf9);
   box-shadow: var(--hero-frame-shadow, 0 20px 50px rgba(21, 58, 133, .12));
   aspect-ratio: var(--hero-image-ratio, 5 / 3);
 }
 .tesla-hero-visual img { width: 100%; height: 100%; border-radius: var(--hero-image-radius, .5rem); object-fit: var(--hero-image-fit, cover); object-position: var(--hero-image-position, center 25%); }
 .dark .tesla-hero {
-  --hero-headline: #e3e8f2; --hero-subtitle: #aab4c3;
-  --hero-badge-text: #bbc4d1; --hero-badge-border: #596272;
-  --hero-button-background: #d4ad55; --hero-button-text: #17243a; --hero-button-hover: #e6c377;
-  --hero-secondary-border: #697689; --hero-secondary-text: #bbc6d5;
-  --hero-secondary-hover-border: #d4ad55; --hero-secondary-hover: #303b4c;
-  --hero-frame-border: #48586e; --hero-frame-background: #29384d;
-  --hero-frame-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+  --hero-headline: #e2edfa; --hero-subtitle: #b0c9e6;
+  --hero-badge-dot: #a9d0ff; --hero-badge-text: #b0c9e6; --hero-badge-border: #789cc4;
+  --hero-button-background: #a9d0ff; --hero-button-text: #142840; --hero-button-hover: #d4e8ff;
+  --hero-secondary-border: #789cc4; --hero-secondary-text: #a9d0ff;
+  --hero-secondary-hover-border: #d4e8ff; --hero-secondary-hover: #203c5c;
+  --hero-frame-border: #789cc4; --hero-frame-background: #203c5c;
+  --hero-frame-shadow: 0 20px 50px rgba(20, 40, 64, .25);
 }
 @media (prefers-reduced-motion: reduce) { .tesla-hero-cta { transition: none; } }

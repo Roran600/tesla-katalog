@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Návrh farieb – Tesla katalóg</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: #f1f6fc; color: #142d50; }
+    .intro { max-width: 1100px; margin: auto; padding: 24px 20px; }
+    .preview { --bg: #f1f6fc; --panel: #e2edf9; --text: #142d50; --muted: #355477; --accent: #174d92; --hover: #10386c; --border: #56789d; background: var(--bg); color: var(--text); border: 2px solid var(--border); margin: 20px auto; max-width: 1100px; }
+    .preview.dark { --bg: #142840; --panel: #203c5c; --text: #e2edfa; --muted: #b0c9e6; --accent: #a9d0ff; --hover: #d4e8ff; --border: #789cc4; }
+    .banner { margin: 0; padding: 6px 20px; color: var(--text); background: var(--panel); font-size: .8rem; font-weight: 700; }
+    .top { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--panel); }
+    .brand { color: var(--accent); font-weight: 800; letter-spacing: .05em; margin-right: auto; }
+    .top a, .content a { color: var(--accent); text-underline-offset: .2em; }
+    .top a:hover, .content a:hover { color: var(--hover); }
+    .content { padding: 30px 20px; }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+    .badge { color: var(--muted); border: 1px solid var(--border); border-radius: 2rem; padding: .3rem .7rem; display: inline-block; font-size: .8rem; }
+    h2, h3, p { color: inherit; }
+    .hero h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 20px 0; }
+    .muted { color: var(--muted); }
+    .buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .buttons a { border-radius: 2rem; padding: .7rem 1rem; border: 1px solid var(--border); text-decoration: none; font-weight: 600; }
+    .buttons .primary { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+    .buttons .primary:hover { color: var(--bg); background: var(--hover); }
+    .buttons .secondary:hover { background: var(--panel); color: var(--hover); }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    figure { margin: 0; padding: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 1rem; }
+    figure img { width: 100%; height: 260px; object-fit: cover; object-position: center 25%; display: block; border-radius: .5rem; }
+    .docs { display: grid; grid-template-columns: 180px 1fr; gap: 25px; }
+    aside { border-right: 1px solid var(--border); padding-right: 15px; }
+    aside a { display: block; padding: 6px; }
+    aside .active { background: var(--panel); font-weight: bold; text-decoration: underline; }
+    .box { border: 1px solid var(--border); background: var(--panel); padding: 14px; margin-top: 18px; }
+    .foot { color: var(--muted); border-top: 1px solid var(--border); padding: 14px 20px; background: var(--panel); }
+    @media (max-width: 767px) { .hero, .docs { grid-template-columns: 1fr; } aside { border-right: 0; border-bottom: 1px solid var(--border); padding: 0 0 12px; } figure img { height: 180px; } }
+    @media (max-width: 480px) { .buttons a { width: 100%; text-align: center; } }
+  </style>
+</head>
+<body>
+  <header class="intro"><h1>Návrh farebnej schémy</h1><p>Ilustračné makety. Nie sú súčasťou webu ani neovplyvňujú jeho obsah, funkcie či prepínanie režimov. Katalógový sken sa nemení.</p></header>
+  <main id="previews"></main>
+  <script>
+    const home = `<div class="hero"><div><span class="badge">● &nbsp; Archív československej elektroniky</span><h2>Objavujte súčiastky<br>a dokumentáciu Tesla</h2><p class="muted">Prehľadný archív súčiastok a prístrojov značky Tesla na jednom mieste</p><div class="buttons"><a class="primary" href="#">Prejsť do dokumentácie</a><a class="secondary" href="#">Katalóg súčiastok →</a></div></div><figure><img src="../static/images/katalog-tr215.jpg" alt="Sken katalógovej strany"></figure></div>`;
+    const docs = `<div class="docs"><aside><a href="#">Docs</a><a href="#">Základy</a><a class="active" href="#">Katalóg súčiastok</a></aside><article><p class="muted">Docs / Katalóg súčiastok</p><h2>Katalóg súčiastok</h2><p>Ukážka čitateľnosti textu a <a href="#">odkazu na dokumentáciu</a> na stránke katalógu.</p><div class="box"><strong>Príklad informačného panelu</strong><p class="muted">Panely, navigácia a interaktívne prvky zostávajú odlíšené aj bez použitia iných farieb.</p><a href="#">Odkaz v paneli</a></div></article></div>`;
+    const container = document.getElementById('previews');
+    for (const [theme, label] of [['light', 'Denný'], ['dark', 'Nočný']]) {
+      for (const [page, content] of [['Úvodná stránka', home], ['Dokumentácia', docs]]) {
+        const section = document.createElement('section');
+        section.className = `preview ${theme}`;
+        section.innerHTML = `<p class="banner">${label} režim · ${page} · ilustračná maketa</p><nav class="top"><span class="brand">TESLA KATALÓG</span><a href="#">Docs</a><a href="#">Blog</a><a href="#">O stránke</a><a href="#">Hľadať</a></nav><div class="content">${content}</div><footer class="foot">Prepínač režimu · Powered by Hextra</footer>`;
+        container.appendChild(section);
+      }
+    }
+  </script>
+</body>
+</html>

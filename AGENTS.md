@@ -5,6 +5,7 @@
 - `zaloha-data/` is the original HTTrack mirror of teslakatalog.cz. Treat it as source archival material: do not rewrite mirrored HTML, paths, `hts-cache/`, or `hts-log.txt` unless the task explicitly targets the raw mirror.
 - `zaloha-dataset-clean/` is the processed archival dataset, not Hugo content. Its `index.md` files are metadata, and scans/PDFs stay beside their corresponding component records.
 - `stranka/` is the Hugo presentation site, using the Hextra Hugo module. It is a self-contained project: keep its build and font-generation inputs inside `stranka/`; do not make them depend on sibling directories. See `stranka/README.md`.
+- `stranka/dizajn/` contains the color-scheme proposal, standalone mockup and its desktop/mobile screenshots. They are reference material, not Hugo content or build inputs; the mockup references the scan in `stranka/static/images/`.
 
 ## Dataset changes
 

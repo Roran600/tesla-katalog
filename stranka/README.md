@@ -19,6 +19,14 @@ zostavení napríklad pomocou `hugo --baseURL https://example.org/tesla/`.
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,
 FontTools ani nástroje WOFF2 preto na bežný Hugo build nie sú potrebné.
 
+## Podklady k dizajnu
+
+Priečinok `dizajn/` obsahuje [návrh farebnej schémy](dizajn/navrh-farebnej-schemy.md),
+[samostatnú maketu](dizajn/navrh-farebnej-schemy.html) a jej snímky pre
+[desktop](dizajn/navrh-farieb-desktop.png) a [mobil](dizajn/navrh-farieb-mobil.png).
+Sú to dokumentačné podklady, nie súčasť Hugo webu ani vstupy jeho zostavenia.
+Maketa používa existujúci katalógový sken z `static/images/`.
+
 ## Nastavenie úvodnej stránky
 
 Súbor `content/_index.md` používa layout Hextra `hextra-home` a vkladá vlastný
