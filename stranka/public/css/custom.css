@@ -76,8 +76,15 @@ main :is(h1, h2, h3, h4, h5, h6), .content :is(h1, h2, h3, h4, h5, h6) { color: 
   text-transform: uppercase;
 }
 
-/* Zachováme pôvodnú kresbu loga; v nočnom režime ju zosvetlíme. */
-.dark .hextra-nav-container img[src*="tesla-emblem.svg"] {
+/* Štvorcový emblém sa prispôsobí šírke obrazovky bez deformácie. */
+.tesla-navbar-logo {
+  width: min(var(--tesla-logo-width, 40px), clamp(2rem, 5vw, 2.5rem));
+  height: auto;
+  flex: none;
+}
+
+/* Kresbu emblému v nočnom režime zosvetlíme. */
+.dark .hextra-nav-container img[src*="tesla-emblem-final.svg"] {
   filter: brightness(0) saturate(100%) invert(86%) sepia(16%) saturate(947%) hue-rotate(183deg) brightness(106%) contrast(101%);
 }
 

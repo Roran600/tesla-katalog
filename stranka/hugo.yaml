@@ -149,7 +149,7 @@ params:
     # Pozor: vlastná šablóna používa default true, preto false logo nevypne.
     displayLogo: true
     logo:
-      path: images/tesla-emblem.svg
+      path: images/tesla-emblem-final.svg
       width: 40
       height: 40
     # Text značky vedľa loga používaný vlastnou šablónou hlavičky.

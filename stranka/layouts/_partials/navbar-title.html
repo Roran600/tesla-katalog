@@ -16,8 +16,8 @@
 </style>
 <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="{{ $logoLink }}">
   {{- if (.Site.Params.navbar.displayLogo | default true) }}
-    <img class="hx:mr-2 hx:block hx:dark:hidden" src="{{ $logoPath | relURL }}" alt="{{ $brandText }}" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
-    <img class="hx:mr-2 hx:hidden hx:dark:block" src="{{ $logoDarkPath | relURL }}" alt="{{ $brandText }}" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
+    <img class="tesla-navbar-logo hx:mr-2 hx:block hx:dark:hidden" style="--tesla-logo-width: {{ $logoWidth }}px" src="{{ $logoPath | relURL }}" alt="" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
+    <img class="tesla-navbar-logo hx:mr-2 hx:hidden hx:dark:block" style="--tesla-logo-width: {{ $logoWidth }}px" src="{{ $logoDarkPath | relURL }}" alt="" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
   {{- end }}
   <span class="tesla-navbar-brand hx:inline hx:select-none">{{ $brandText }}</span>
 </a>
