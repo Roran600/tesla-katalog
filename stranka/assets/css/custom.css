@@ -56,6 +56,17 @@ html, body { background-color: var(--tesla-bg); color: var(--tesla-text); }
 /* Copyright pod kreditom témy, v rovnakej palete ako zvyšok stránky. */
 .hextra-footer #tesla-current-year { font-variant-numeric: tabular-nums; }
 .hextra-sidebar-container, .hextra-scrollbar { background-color: var(--tesla-bg); }
+/* Hextra vytvára pre spodné ovládacie lišty biely/čierny prechod. Na
+   modrom pozadí musí mať rovnakú farbu ako okolitý panel. */
+.hextra-sidebar-container > [data-toggle-animation="show"],
+.hextra-toc .hextra-scrollbar > div[class*="hx:sticky"] {
+  background-color: var(--tesla-bg);
+  box-shadow: 0 -12px 16px var(--tesla-bg);
+}
+@media (prefers-contrast: more) {
+  .hextra-sidebar-container > [data-toggle-animation="show"],
+  .hextra-toc .hextra-scrollbar > div[class*="hx:sticky"] { box-shadow: none; }
+}
 .hextra-sidebar-item a, .hextra-nav-container nav > a:not(:first-child),
 .hextra-search-trigger, .hextra-footer { color: var(--tesla-muted); }
 .hextra-sidebar-item a:hover, .hextra-nav-container nav > a:not(:first-child):hover { color: var(--tesla-hover); background-color: var(--tesla-panel); }

@@ -3,6 +3,8 @@ title: "Ukážka dokumentácie"
 weight: 1
 prev: /docs/zaklady
 next: /docs/katalog-suciastok
+outputs: [html, markdown]
+contextMenu: true
 ---
 
 **Ukážkový obsah:** táto stránka overuje rozloženie dokumentácie; nejde o katalógový záznam.

@@ -2,6 +2,8 @@
 title: "Dokumentácia"
 weight: 1
 next: /docs/zaklady
+outputs: [html, rss, markdown]
+contextMenu: true
 ---
 
 Vitajte v dokumentácii projektu Tesla katalóg, pripravovaného archívu československej elektroniky.

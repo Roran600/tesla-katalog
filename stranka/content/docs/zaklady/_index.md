@@ -3,6 +3,8 @@ title: "Základy"
 weight: 1
 prev: /docs
 next: /docs/zaklady/ukazka
+outputs: [html, rss, markdown]
+contextMenu: true
 ---
 
 Táto sekcia predstavuje orientáciu v pripravovanom archíve.

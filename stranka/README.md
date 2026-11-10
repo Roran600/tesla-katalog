@@ -25,6 +25,9 @@ obsah a možno ich po doplnení skutočného obsahu odstrániť. Pri odstránen�
 ukážkovej dokumentačnej stránky treba upraviť aj odkazy na ňu a front matter
 `prev`/`next` v susedných sekciách. Odkazy v obsahu používajú `relref`, aby
 fungovali aj pri nasadení do podpriečinka.
+Pre kopírovanie zdrojového Markdownu cez kontextové menu Hextra majú tieto
+stránky povolený výstup `markdown` a `contextMenu: true` vo front matter;
+skopírovaný zdroj môže obsahovať Hugo shortcody.
 
 **Font sa pri bežnom zostavení stránky negeneruje.** Hugo skopíruje už
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,

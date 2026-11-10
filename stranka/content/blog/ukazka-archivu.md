@@ -3,6 +3,8 @@ title: "Ukážka: pripravovaný archív"
 date: 2026-01-02
 description: "Ukážkový príspevok o pripravovanom archíve Tesla katalóg."
 authors: ["Tesla katalóg"]
+outputs: [html, markdown]
+contextMenu: true
 ---
 
 **Ukážkový príspevok:** tento text slúži na overenie vzhľadu a navigácie blogu.
