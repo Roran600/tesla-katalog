@@ -19,6 +19,19 @@ zostavení napríklad pomocou `hugo --baseURL https://example.org/tesla/`.
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,
 FontTools ani nástroje WOFF2 preto na bežný Hugo build nie sú potrebné.
 
+## Pätička
+
+Texty a prvý rok copyrightu sa nastavujú v `hugo.yaml` pod `params.footer`.
+Vlastný partial `layouts/_partials/footer.html` vychádza z Hextra 0.13.0
+a zobrazuje nastavený copyright pod kreditom témy. Pri aktualizácii témy
+treba porovnať tento partial s novou verziou pôvodnej pätičky.
+Hook `layouts/_partials/custom/footer.html` načítava `static/js/footer-year.js`:
+rok sa riadi miestnym dátumom návštevníka a aktualizuje sa pri otvorení,
+po návrate na kartu a približne raz za hodinu aj bez nového buildu. Pri
+vypnutom alebo blokovanom JavaScripte zostane rok zostavenia; nesprávne
+hodiny návštevníka môžu zobraziť nesprávny rok. Na overenie logiky spustite
+`node scripts/test_footer_year.js` po zostavení webu.
+
 ## Podklady k dizajnu
 
 Priečinok `dizajn/` obsahuje [návrh farebnej schémy](dizajn/navrh-farebnej-schemy.md),

@@ -53,6 +53,8 @@ html, body { background-color: var(--tesla-bg); color: var(--tesla-text); }
 .hextra-footer { background: var(--tesla-panel); }
 .hextra-nav-container-blur { border-bottom: 1px solid var(--tesla-border); }
 .hextra-footer { border-top: 1px solid var(--tesla-border); }
+/* Copyright pod kreditom témy, v rovnakej palete ako zvyšok stránky. */
+.hextra-footer #tesla-current-year { font-variant-numeric: tabular-nums; }
 .hextra-sidebar-container, .hextra-scrollbar { background-color: var(--tesla-bg); }
 .hextra-sidebar-item a, .hextra-nav-container nav > a:not(:first-child),
 .hextra-search-trigger, .hextra-footer { color: var(--tesla-muted); }

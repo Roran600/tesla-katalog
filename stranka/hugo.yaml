@@ -159,6 +159,14 @@ params:
   theme:
     default: system
     displayToggle: true
+  # Pätička: predvolený kredit Hextra zostáva zobrazený nad copyrightom.
+  footer:
+    displayCopyright: true # false skryje oba riadky copyrightu.
+    displayPoweredBy: true # false skryje označenie „Powered by Hextra“.
+    copyright:
+      startYear: 2026 # Prvý rok rozsahu; posledný rok určí prehliadač.
+      owner: "Roran60" # Meno uvedené za rozsahom rokov.
+      notice: "Autorské práva patria pôvodným vlastníkom" # Druhý riadok.
 
 # Spracovanie Markdownu a zvýrazňovanie blokov kódu.
 markup:
