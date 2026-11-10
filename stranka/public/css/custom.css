@@ -65,6 +65,10 @@ html, body { background-color: var(--tesla-bg); color: var(--tesla-text); }
 main :is(h1, h2, h3, h4, h5, h6), .content :is(h1, h2, h3, h4, h5, h6) { color: var(--tesla-text); }
 .content a, .hextra-content a { color: var(--tesla-accent); text-decoration: underline; text-underline-offset: .2em; }
 .content a:hover, .hextra-content a:hover { color: var(--tesla-hover); }
+/* Odkaz „Read more“ vo výpise blogu je mimo .content; Hextra mu inak
+   priradí sýtu modrú, ktorá má v tmavom režime slabý kontrast. */
+main a[class*="text-[color:hsl(var(--primary-hue)"] { color: var(--tesla-accent); }
+main a[class*="text-[color:hsl(var(--primary-hue)"]:hover { color: var(--tesla-hover); }
 :focus-visible { outline: 3px solid var(--tesla-accent); outline-offset: 3px; }
 
 /* Font načítava šablóna hlavičky pomocou cesty vzhľadom na Hugo baseURL. */

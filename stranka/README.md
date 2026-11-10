@@ -15,6 +15,17 @@ Na vytvorenie statickej stránky použite `hugo`. Výstup sa štandardne uloží
 do `public/`. Adresu nasadenia možno nastaviť v `hugo.yaml` alebo pri
 zostavení napríklad pomocou `hugo --baseURL https://example.org/tesla/`.
 
+## Dokumentácia a blog
+
+Sekcie `content/docs/` a `content/blog/` používajú natívne šablóny Hextra
+pre dokumentáciu a blog; navigácia dokumentácie vychádza zo štruktúry súborov
+a poradia `weight`. Blogové príspevky sú zoradené podľa dátumu. Stránka
+`docs/zaklady/ukazka.md` a oba články s názvom „Ukážka“ sú iba testovací
+obsah a možno ich po doplnení skutočného obsahu odstrániť. Pri odstránení
+ukážkovej dokumentačnej stránky treba upraviť aj odkazy na ňu a front matter
+`prev`/`next` v susedných sekciách. Odkazy v obsahu používajú `relref`, aby
+fungovali aj pri nasadení do podpriečinka.
+
 **Font sa pri bežnom zostavení stránky negeneruje.** Hugo skopíruje už
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,
 FontTools ani nástroje WOFF2 preto na bežný Hugo build nie sú potrebné.
