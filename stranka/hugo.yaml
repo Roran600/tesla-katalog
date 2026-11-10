@@ -71,10 +71,10 @@ params:
       showArrow: true # Šípka v druhom tlačidle.
     # Obrázok je v static/; width a height sú skutočné rozmery zdroja v px.
     image:
-      path: "images/katalog-tr215.jpg"
-      alt: "Sken katalógovej strany s uhlíkovými rezistormi TR 211 až TR 217"
-      width: 960
-      height: 1280
+      path: "images/tesla-2-navrh-5x3-v3-2x.png"
+      alt: "Znak Tesla s nápisom Československý výrobek"
+      width: 1090
+      height: 654
     # Šírky zlomov v pixeloch: stĺpce a tlačidlá sa pod nimi uložia pod seba.
     responsive:
       columnsBreakpoint: 767
@@ -101,8 +101,8 @@ params:
       secondary-font-size: "1rem"
       mobile-button-width: "100%"
       image-ratio: "5 / 3"
-      image-fit: "cover" # Napríklad cover alebo contain.
-      image-position: "center 25%"
+      image-fit: "contain" # Napríklad cover alebo contain.
+      image-position: "center"
       image-radius: ".5rem"
       frame-width: "1px"
       frame-radius: "1rem"
