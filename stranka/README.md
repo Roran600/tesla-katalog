@@ -39,6 +39,12 @@ text, nie HTML ani Markdown. Zdrojový export Markdown zachováva pôvodný záp
 Úpravy šablón a vyhľadávacieho indexu vychádzajú z Hextra 0.13.0; pri jej
 aktualizácii ich treba porovnať s novou verziou témy.
 
+Na priebežnú skúšku sú emoji výslovne vložené do položky `Docs` v `hugo.yaml`,
+do názvu sekcie `content/docs/zaklady/_index.md`, stránky
+`content/docs/zaklady/ukazka.md` a článku `content/blog/ukazka-archivu.md`.
+Príklady používajú priamy Unicode aj skratky `:books:` a `:sparkles:`;
+možno ich odstrániť alebo zmeniť bez zmeny adresy stránok.
+
 - Dokumentačné sekcie majú `_index.md`, jednotlivé stránky vlastný súbor
   `.md`. Strom navigácie vychádza zo štruktúry obsahu a poradia `weight`.
   Polia `prev` a `next` vo front matter určujú prechody medzi súčasnými
@@ -67,6 +73,13 @@ hugo --baseURL https://example.org/tesla/ --destination /tmp/opencode/tesla-site
 node scripts/test_footer_year.js /tmp/opencode/tesla-site-root
 python3 scripts/test_emoji.py
 ```
+
+Test emoji vytvorí dočasnú kópiu projektu, vloží do nej samostatné skúšobné
+hodnoty a overí zostavený HTML, escapovanie textu, vyhľadávací index, RSS,
+Markdown a odkazy s podcestou. Nezapisuje testovacie údaje do obsahu ani do
+`public/`. Používa existujúce ukážkové stránky a názov položky `Docs 📚`;
+pri ich premenovaní treba upraviť aj test. Vizuálnu kontrolu v prehliadači
+ani kontrolu obsahu schránky nenahrádza.
 
 Skontrolujte odkazy, obrázky a Markdown výstupy, vrátane prefixu `/tesla/`
 pri podceste. V prehliadači overte indexy a detaily dokumentácie aj blogu,
