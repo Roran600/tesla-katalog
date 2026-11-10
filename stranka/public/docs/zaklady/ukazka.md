@@ -1,4 +1,4 @@
-# Ukážka dokumentácie
+# Ukážka dokumentácie 🔧
 
 **Ukážkový obsah:** táto stránka overuje rozloženie dokumentácie; nejde o katalógový záznam.
 

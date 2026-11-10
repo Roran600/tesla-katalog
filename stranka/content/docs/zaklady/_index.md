@@ -1,5 +1,5 @@
 ---
-title: "Základy"
+title: "Základy :books:"
 weight: 1
 prev: /docs
 next: /docs/zaklady/ukazka

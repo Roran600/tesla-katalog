@@ -15,23 +15,65 @@ Na vytvorenie statickej stránky použite `hugo`. Výstup sa štandardne uloží
 do `public/`. Adresu nasadenia možno nastaviť v `hugo.yaml` alebo pri
 zostavení napríklad pomocou `hugo --baseURL https://example.org/tesla/`.
 
-## Dokumentácia a blog
-
-Sekcie `content/docs/` a `content/blog/` používajú natívne šablóny Hextra
-pre dokumentáciu a blog; navigácia dokumentácie vychádza zo štruktúry súborov
-a poradia `weight`. Blogové príspevky sú zoradené podľa dátumu. Stránka
-`docs/zaklady/ukazka.md` a oba články s názvom „Ukážka“ sú iba testovací
-obsah a možno ich po doplnení skutočného obsahu odstrániť. Pri odstránení
-ukážkovej dokumentačnej stránky treba upraviť aj odkazy na ňu a front matter
-`prev`/`next` v susedných sekciách. Odkazy v obsahu používajú `relref`, aby
-fungovali aj pri nasadení do podpriečinka.
-Pre kopírovanie zdrojového Markdownu cez kontextové menu Hextra majú tieto
-stránky povolený výstup `markdown` a `contextMenu: true` vo front matter;
-skopírovaný zdroj môže obsahovať Hugo shortcody.
-
 **Font sa pri bežnom zostavení stránky negeneruje.** Hugo skopíruje už
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,
 FontTools ani nástroje WOFF2 preto na bežný Hugo build nie sú potrebné.
+
+## Dokumentácia a blog
+
+Sekcie `content/docs/` a `content/blog/` používajú natívne šablóny Hextra
+pre dokumentáciu a blog. Dokumentácia má na desktope strom stránok a obsah
+aktuálnej stránky; na mobile je navigácia dostupná cez menu v hlavičke. Blog
+zobrazuje príspevky podľa dátumu, ponúka ich stránkovanie a [RSS kanál](content/blog/_index.md).
+Spoločná paleta a úpravy Hextra sú v `assets/css/custom.css`; slovenské texty
+niektorých ovládacích prvkov sú v `i18n/sk.yaml`.
+
+### Pridanie a údržba obsahu
+
+Text značky, položiek hlavného menu, copyrightu a názvy dokumentačných
+stránok, sekcií a blogových článkov môžu obsahovať priamo Unicode emoji
+alebo skratku Huga, napríklad `:wrench:`. V zobrazení sa nahrádza iba
+známa skratka; emoji sa nepridávajú automaticky. Zoznam skratiek uvádza
+[Hugo](https://gohugo.io/quick-reference/emojis/). Tieto polia sú obyčajný
+text, nie HTML ani Markdown. Zdrojový export Markdown zachováva pôvodný zápis.
+Úpravy šablón a vyhľadávacieho indexu vychádzajú z Hextra 0.13.0; pri jej
+aktualizácii ich treba porovnať s novou verziou témy.
+
+- Dokumentačné sekcie majú `_index.md`, jednotlivé stránky vlastný súbor
+  `.md`. Strom navigácie vychádza zo štruktúry obsahu a poradia `weight`.
+  Polia `prev` a `next` vo front matter určujú prechody medzi súčasnými
+  dokumentačnými stránkami; pri zmene poradia upravte aj susedné stránky.
+- Blogový príspevok patrí do `content/blog/`. Front matter môže obsahovať
+  `title`, `date`, `description` a `authors`; dátum určuje poradie vo výpise.
+- Pre kontextové menu Hextra s kopírovaním Markdownu nastavte na jednotlivej
+  stránke `outputs: [html, markdown]` a `contextMenu: true`. Na sekcii, ktorá
+  má zachovať aj RSS výstup, použite `outputs: [html, rss, markdown]`.
+  Skopírovaný zdroj môže obsahovať Hugo shortcody.
+- Interné odkazy v obsahu používajú `relref`, aby fungovali aj pri nasadení
+  do podpriečinka. Obrázky a iné verejné súbory patria do `static/`.
+
+`content/docs/zaklady/ukazka.md` a oba články blogu s názvom „Ukážka“ sú
+testovací obsah, nie katalógové záznamy. Po doplnení skutočného obsahu ich
+možno odstrániť; treba pritom upraviť odkazy na ne aj príslušné `prev`/`next`.
+
+### Overenie zmien
+
+Zostavte web do samostatného adresára, aby ste neprepísali prípadné zmeny v
+`public/`, a overte aj nasadenie pod URL podcestou:
+
+```sh
+hugo --destination /tmp/opencode/tesla-site-root
+hugo --baseURL https://example.org/tesla/ --destination /tmp/opencode/tesla-site-subpath
+node scripts/test_footer_year.js /tmp/opencode/tesla-site-root
+python3 scripts/test_emoji.py
+```
+
+Skontrolujte odkazy, obrázky a Markdown výstupy, vrátane prefixu `/tesla/`
+pri podceste. V prehliadači overte indexy a detaily dokumentácie aj blogu,
+menu, vyhľadávanie, obsah stránky, prechody medzi článkami, kopírovanie a RSS.
+Porovnajte mobil a desktop vo svetlom aj tmavom režime; po zmene spoločných
+štýlov skontrolujte aj úvodnú stránku, hlavičku a pätičku. `/tmp/opencode`
+je adresár tohto vývojového prostredia; inde zvoľte vhodný dočasný cieľ.
 
 ## Pätička
 

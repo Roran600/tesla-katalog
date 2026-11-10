@@ -1,5 +1,5 @@
 ---
-title: "Ukážka dokumentácie"
+title: "Ukážka dokumentácie 🔧"
 weight: 1
 prev: /docs/zaklady
 next: /docs/katalog-suciastok

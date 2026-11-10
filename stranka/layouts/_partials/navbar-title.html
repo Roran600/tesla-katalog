@@ -19,5 +19,5 @@
     <img class="tesla-navbar-logo hx:mr-2 hx:block hx:dark:hidden" style="--tesla-logo-width: {{ $logoWidth }}px" src="{{ $logoPath | relURL }}" alt="" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
     <img class="tesla-navbar-logo hx:mr-2 hx:hidden hx:dark:block" style="--tesla-logo-width: {{ $logoWidth }}px" src="{{ $logoDarkPath | relURL }}" alt="" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
   {{- end }}
-  <span class="tesla-navbar-brand hx:inline hx:select-none">{{ $brandText }}</span>
+  <span class="tesla-navbar-brand hx:inline hx:select-none">{{ $brandText | emojify | printf "%s" }}</span>
 </a>

@@ -1,5 +1,5 @@
 ---
-title: "Ukážka: pripravovaný archív"
+title: "Ukážka: pripravovaný archív :sparkles:"
 date: 2026-01-02
 description: "Ukážkový príspevok o pripravovanom archíve Tesla katalóg."
 authors: ["Tesla katalóg"]

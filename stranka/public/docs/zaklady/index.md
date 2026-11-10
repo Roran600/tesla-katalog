@@ -1,4 +1,4 @@
-# Základy
+# Základy :books:
 
 Táto sekcia predstavuje orientáciu v pripravovanom archíve.
 

@@ -26,7 +26,7 @@
     <div class="hextra-max-footer-width hx:mx-auto hx:flex hx:justify-center hx:py-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400 hx:md:justify-start">
       <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start">
         {{- if $displayPoweredBy }}<div class="hx:font-semibold">{{ template "theme-credit" $poweredBy }}</div>{{- end -}}
-        {{- if .Site.Params.footer.displayCopyright }}<div class="hx:mt-6 hx:text-xs">© {{ $copyright.startYear | default 2026 }}–<span id="tesla-current-year">{{ now.Year }}</span> {{ $copyright.owner | default "Roran60" }}<br>{{ $copyright.notice | default "Autorské práva patria pôvodným vlastníkom" }}</div>{{- end -}}
+        {{- if .Site.Params.footer.displayCopyright }}<div class="hx:mt-6 hx:text-xs">© {{ $copyright.startYear | default 2026 }}–<span id="tesla-current-year">{{ now.Year }}</span> {{ $copyright.owner | default "Roran60" | emojify | printf "%s" }}<br>{{ $copyright.notice | default "Autorské práva patria pôvodným vlastníkom" | emojify | printf "%s" }}</div>{{- end -}}
       </div>
     </div>
   {{- end -}}

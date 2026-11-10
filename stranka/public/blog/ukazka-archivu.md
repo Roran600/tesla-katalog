@@ -1,4 +1,4 @@
-# Ukážka: pripravovaný archív
+# Ukážka: pripravovaný archív :sparkles:
 
 **Ukážkový príspevok:** tento text slúži na overenie vzhľadu a navigácie blogu.
 
