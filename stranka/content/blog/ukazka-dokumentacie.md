@@ -11,4 +11,4 @@ contextMenu: true
 
 ## Dokumentácia
 
-Štruktúru dokumentácie si môžete pozrieť v [ukážkovej stránke]({{< relref "/docs/zaklady/ukazka" >}}).
+Štruktúru dokumentácie si môžete pozrieť v [úvode katalógu]({{< relref "/docs" >}}).

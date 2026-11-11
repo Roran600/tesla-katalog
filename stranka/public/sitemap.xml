@@ -4,11 +4,29 @@
   <url>
     <loc>http://localhost:1313/docs/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/zaklady/ukazka/</loc>
+    <loc>http://localhost:1313/docs/katalog/integrovane-obvody/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/zaklady/</loc>
+    <loc>http://localhost:1313/docs/katalog/</loc>
   </url><url>
-    <loc>http://localhost:1313/docs/katalog-suciastok/</loc>
+    <loc>http://localhost:1313/docs/katalog/tranzistory/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/tyristory-triaky/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/diody-varikapy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/displeje-led/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/kondenzatory/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/rezistory/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/tlmivky-filtre/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/krystaly-oscilatory/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/termistory-pramet/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/katalog/na-stiahnutie/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-02T00:00:00+00:00</lastmod>

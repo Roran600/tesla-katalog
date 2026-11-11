@@ -16,21 +16,155 @@
     
     
     <item>
-      <title>Ukážka dokumentácie 🔧</title>
-      <link>http://localhost:1313/docs/zaklady/ukazka/</link>
+      <title>Integrované obvody</title>
+      <link>http://localhost:1313/docs/katalog/integrovane-obvody/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/zaklady/ukazka/</guid>
+      <guid>http://localhost:1313/docs/katalog/integrovane-obvody/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;strong&gt;Ukážkový obsah:&lt;/strong&gt; táto stránka overuje rozloženie dokumentácie; nejde o katalógový záznam.&lt;/p&gt;
-&lt;h2 data-hextra-search-id=&#34;navigácia-v-dokumentácii&#34;&gt;Navigácia v dokumentácii&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;navigácia-v-dokumentácii&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#navig%c3%a1cia-v-dokument%c3%a1cii&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Na väčšej obrazovke sa strom dokumentácie zobrazuje vľavo. Na menšej obrazovke je dostupný cez menu v hlavičke.&lt;/p&gt;
-&lt;h2 data-hextra-search-id=&#34;obsah-stránky&#34;&gt;Obsah stránky&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;obsah-stránky&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#obsah-str%c3%a1nky&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Nadpisy pomáhajú pri orientácii v dlhších článkoch a zobrazujú sa v obsahu stránky.&lt;/p&gt;
-&lt;h3 data-hextra-search-id=&#34;ďalšie-informácie&#34;&gt;Ďalšie informácie&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;ďalšie-informácie&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#%c4%8fal%c5%a1ie-inform%c3%a1cie&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Prejdite na &lt;a href=&#34;http://localhost:1313/docs/katalog-suciastok/&#34;&gt;katalóg súčiastok&lt;/a&gt; alebo späť na &lt;a href=&#34;http://localhost:1313/docs/&#34;&gt;úvod dokumentácie&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tranzistory</title>
+      <link>http://localhost:1313/docs/katalog/tranzistory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/tranzistory/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tyristory, triaky</title>
+      <link>http://localhost:1313/docs/katalog/tyristory-triaky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/tyristory-triaky/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Diódy, varikapy</title>
+      <link>http://localhost:1313/docs/katalog/diody-varikapy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/diody-varikapy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Displeje, LED</title>
+      <link>http://localhost:1313/docs/katalog/displeje-led/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/displeje-led/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Kondenzátory</title>
+      <link>http://localhost:1313/docs/katalog/kondenzatory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/kondenzatory/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Rezistory</title>
+      <link>http://localhost:1313/docs/katalog/rezistory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/rezistory/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tlmivky, filtre</title>
+      <link>http://localhost:1313/docs/katalog/tlmivky-filtre/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/tlmivky-filtre/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Kryštály, oscilátory</title>
+      <link>http://localhost:1313/docs/katalog/krystaly-oscilatory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/krystaly-oscilatory/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Termistory Pramet</title>
+      <link>http://localhost:1313/docs/katalog/termistory-pramet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/termistory-pramet/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Katalógové záznamy v tejto kategórii sa pripravujú.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Na stiahnutie</title>
+      <link>http://localhost:1313/docs/katalog/na-stiahnutie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/katalog/na-stiahnutie/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Súbory na stiahnutie sa pripravujú.&lt;/p&gt;
 
       </description>
     </item>

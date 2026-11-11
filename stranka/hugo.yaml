@@ -67,7 +67,7 @@ params:
     # Druhé tlačidlo a jeho cieľová cesta.
     secondaryCta:
       text: "Katalóg súčiastok"
-      link: "/docs/katalog-suciastok/"
+      link: "/docs/katalog/"
       showArrow: true # Šípka v druhom tlačidle.
     # Obrázok je v static/; width a height sú skutočné rozmery zdroja v px.
     image:
