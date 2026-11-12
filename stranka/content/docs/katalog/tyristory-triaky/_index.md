@@ -1,0 +1,124 @@
+---
+title: "Tyristory, triaky"
+weight: 3
+prev: /docs/katalog/tranzistory
+next: /docs/katalog/diody-varikapy
+outputs: [html, rss, markdown]
+contextMenu: true
+source_url: "https://teslakatalog.cz/tyristor-triak-diak.php"
+source_file: "tyristor-triak-diak.html"
+description: "Katalog součástek - tyristory, triaky, diaky - náhrada stránek io.freehosting.cz a io1.freehosting.cz a jejich doplnění"
+keywords:
+  - "katalog"
+  - "list"
+  - "Tesla"
+  - "tyristor"
+  - "triak"
+  - "diak"
+item_count: 100
+---
+
+Katalog součástek - tyristory, triaky, diaky - náhrada stránek io.freehosting.cz a io1.freehosting.cz a jejich doplnění
+
+## Súčiastky
+
+- [KR100]({{< relref "kr100" >}})
+- [KR101/300]({{< relref "kr101-300" >}})
+- [KR101/400]({{< relref "kr101-400" >}})
+- [KR101/500]({{< relref "kr101-500" >}})
+- [KR105]({{< relref "kr105" >}})
+- [KR106]({{< relref "kr106" >}})
+- [KR107]({{< relref "kr107" >}})
+- [KR205]({{< relref "kr205" >}})
+- [KR206]({{< relref "kr206" >}})
+- [KR207]({{< relref "kr207" >}})
+- [KR9903]({{< relref "kr9903" >}})
+- [KT110]({{< relref "kt110" >}})
+- [KT110/200]({{< relref "kt110-200" >}})
+- [KT110/400]({{< relref "kt110-400" >}})
+- [KT110/600]({{< relref "kt110-600" >}})
+- [KT119A]({{< relref "kt119a" >}})
+- [KT120/500]({{< relref "kt120-500" >}})
+- [KT120A]({{< relref "kt120a" >}})
+- [KT128]({{< relref "kt128" >}})
+- [KT129]({{< relref "kt129" >}})
+- [KT201/100]({{< relref "kt201-100" >}})
+- [KT201/200]({{< relref "kt201-200" >}})
+- [KT201/300]({{< relref "kt201-300" >}})
+- [KT201/400]({{< relref "kt201-400" >}})
+- [KT201/500]({{< relref "kt201-500" >}})
+- [KT201/600]({{< relref "kt201-600" >}})
+- [KT205/200]({{< relref "kt205-200" >}})
+- [KT205/400]({{< relref "kt205-400" >}})
+- [KT205/600]({{< relref "kt205-600" >}})
+- [KT206/200]({{< relref "kt206-200" >}})
+- [KT206/400]({{< relref "kt206-400" >}})
+- [KT206/600]({{< relref "kt206-600" >}})
+- [KT207/200]({{< relref "kt207-200" >}})
+- [KT207/400]({{< relref "kt207-400" >}})
+- [KT207/600]({{< relref "kt207-600" >}})
+- [KT401/100]({{< relref "kt401-100" >}})
+- [KT401/200]({{< relref "kt401-200" >}})
+- [KT401/300]({{< relref "kt401-300" >}})
+- [KT401/400]({{< relref "kt401-400" >}})
+- [KT401/50]({{< relref "kt401-50" >}})
+- [KT401/500]({{< relref "kt401-500" >}})
+- [KT401/600]({{< relref "kt401-600" >}})
+- [KT401/700]({{< relref "kt401-700" >}})
+- [KT501]({{< relref "kt501" >}})
+- [KT502]({{< relref "kt502" >}})
+- [KT503]({{< relref "kt503" >}})
+- [KT504]({{< relref "kt504" >}})
+- [KT505]({{< relref "kt505" >}})
+- [KT506]({{< relref "kt506" >}})
+- [KT508/100]({{< relref "kt508-100" >}})
+- [KT508/200]({{< relref "kt508-200" >}})
+- [KT508/300]({{< relref "kt508-300" >}})
+- [KT508/400]({{< relref "kt508-400" >}})
+- [KT508/50]({{< relref "kt508-50" >}})
+- [KT511]({{< relref "kt511" >}})
+- [KT701]({{< relref "kt701" >}})
+- [KT702]({{< relref "kt702" >}})
+- [KT703]({{< relref "kt703" >}})
+- [KT704]({{< relref "kt704" >}})
+- [KT705]({{< relref "kt705" >}})
+- [KT706]({{< relref "kt706" >}})
+- [KT707]({{< relref "kt707" >}})
+- [KT708]({{< relref "kt708" >}})
+- [KT710]({{< relref "kt710" >}})
+- [KT711]({{< relref "kt711" >}})
+- [KT712]({{< relref "kt712" >}})
+- [KT713]({{< relref "kt713" >}})
+- [KT714]({{< relref "kt714" >}})
+- [KT725/100]({{< relref "kt725-100" >}})
+- [KT725/200]({{< relref "kt725-200" >}})
+- [KT725/300]({{< relref "kt725-300" >}})
+- [KT725/400]({{< relref "kt725-400" >}})
+- [KT725/50]({{< relref "kt725-50" >}})
+- [KT725/500]({{< relref "kt725-500" >}})
+- [KT725/600]({{< relref "kt725-600" >}})
+- [KT726/200]({{< relref "kt726-200" >}})
+- [KT726/400]({{< relref "kt726-400" >}})
+- [KT726/600]({{< relref "kt726-600" >}})
+- [KT726/800]({{< relref "kt726-800" >}})
+- [KT728/400]({{< relref "kt728-400" >}})
+- [KT728/600]({{< relref "kt728-600" >}})
+- [KT728/800]({{< relref "kt728-800" >}})
+- [KT729/700]({{< relref "kt729-700" >}})
+- [KT729/800]({{< relref "kt729-800" >}})
+- [KT729/900]({{< relref "kt729-900" >}})
+- [KT730/700]({{< relref "kt730-700" >}})
+- [KT730/800]({{< relref "kt730-800" >}})
+- [KT730/900]({{< relref "kt730-900" >}})
+- [KT772]({{< relref "kt772" >}})
+- [KT773]({{< relref "kt773" >}})
+- [KT774]({{< relref "kt774" >}})
+- [KT782]({{< relref "kt782" >}})
+- [KT783]({{< relref "kt783" >}})
+- [KT784]({{< relref "kt784" >}})
+- [KT803/400]({{< relref "kt803-400" >}})
+- [KT803/600]({{< relref "kt803-600" >}})
+- [KT803/800]({{< relref "kt803-800" >}})
+- [KT804/400]({{< relref "kt804-400" >}})
+- [KT804/600]({{< relref "kt804-600" >}})
+- [KT804/800]({{< relref "kt804-800" >}})

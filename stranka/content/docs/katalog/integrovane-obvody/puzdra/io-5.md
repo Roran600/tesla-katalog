@@ -1,0 +1,20 @@
+---
+title: "IO-5"
+catalog: "Integrované obvody"
+package_id: "IO-5"
+source_section: "Púzdra IO"
+source_page: 242
+sidebar:
+  exclude: true
+outputs: [html, markdown]
+contextMenu: true
+---
+
+**Katalóg:** [Integrované obvody]({{< relref "/docs/katalog/integrovane-obvody" >}})\
+**Pôvod:** Index „Púzdra IO“, strana 242 tlačeného katalógu.
+
+## Sken
+
+[Otvoriť sken]({{< katalog-asset "katalog/integrovane-obvody/puzdra/io-5/scan-strana-242.jpg" >}})
+
+![Púzdro IO-5 — strana 242](/katalog/integrovane-obvody/puzdra/io-5/scan-strana-242.jpg)

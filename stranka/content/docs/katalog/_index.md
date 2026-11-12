@@ -27,4 +27,4 @@ Vitajte v katalógu československých elektronických súčiastok Tesla. Kateg�
 
 ## Stav katalógu
 
-Jednotlivé záznamy a súbory na stiahnutie sa pripravujú.
+Sprístupnených je všetkých 10 kategórií, samostatné záznamy puzdier IO a súbory PDF na stiahnutie.

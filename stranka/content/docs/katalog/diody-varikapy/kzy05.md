@@ -1,0 +1,68 @@
+---
+title: "KZY05"
+catalog: "Diody, varikapy"
+catalog_id: "KZY05"
+source_html: "KZY05.html"
+source_url: "https://teslakatalog.cz/KZY05.html"
+description: "Katalog součástek - KZY05"
+keywords:
+  - "katalog"
+  - "list"
+  - "součástka"
+  - "Tesla"
+  - "KZY05"
+scan_count: 3
+sidebar:
+  exclude: true
+outputs: [html, markdown]
+contextMenu: true
+---
+
+# KZY05
+
+**Katalóg:** [Diody, varikapy]({{< relref "/docs/katalog/diody-varikapy" >}})
+
+**Označenie:** `KZY05`
+
+**Popis:** Katalog součástek - KZY05
+
+**Kľúčové slová:** katalog, list, součástka, Tesla, KZY05
+
+## Obsah
+
+* * *
+
+
+KZY05 v katalogu součástek 1987:
+
+
+
+
+
+KZY05 v katalogu součástek 1983:
+
+
+
+
+
+* * *
+
+## Scany
+
+**KZY05 v katalogu součástek 1987:**
+
+- [Sken 1 — scan-01.gif]({{< katalog-asset "katalog/diody-varikapy/kzy05/scan-01.gif" >}})
+
+![Sken 1](/katalog/diody-varikapy/kzy05/scan-01.gif)
+
+**KZY05 v katalogu součástek 1987:**
+
+- [Sken 2 — scan-02.gif]({{< katalog-asset "katalog/diody-varikapy/kzy05/scan-02.gif" >}})
+
+![Sken 2](/katalog/diody-varikapy/kzy05/scan-02.gif)
+
+**KZY05 v katalogu součástek 1983:**
+
+- [Sken 3 — scan-03.gif]({{< katalog-asset "katalog/diody-varikapy/kzy05/scan-03.gif" >}})
+
+![Sken 3](/katalog/diody-varikapy/kzy05/scan-03.gif)

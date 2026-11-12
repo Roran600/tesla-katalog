@@ -49,6 +49,13 @@ def main():
         assert desktop_sidebar.index('href="/tesla/docs/"') < desktop_sidebar.index('href="/tesla/docs/katalog/"')
         assert re.search(r'data-active="true"[^>]*>\s*<a[^>]*href="/tesla/docs/"', desktop_sidebar)
         assert desktop_sidebar.count('href="/tesla/docs/"') == 1
+        # Catalogue details are excluded from the sidebar: a section with only
+        # excluded children must not display a nonfunctional expand button.
+        sidebar_item = re.search(
+            r'<div class="hextra-sidebar-item\b[^>]*>\s*<a\b[^>]*href="/tesla/docs/katalog/integrovane-obvody/".*?</div>',
+            desktop_sidebar, re.S)
+        assert sidebar_item, 'catalogue section missing from sidebar'
+        assert '<button' not in sidebar_item.group(), 'empty catalogue expander'
         for text in (home, docs, category, item, blog, article):
             assert 'Značka 🔧 🔧 &lt;b&gt;brand&lt;/b&gt;' in text
             assert 'Menu 🔧 🔧 &lt;b&gt;menu&lt;/b&gt;' in text

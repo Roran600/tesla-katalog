@@ -19,6 +19,12 @@ zostavení napríklad pomocou `hugo --baseURL https://example.org/tesla/`.
 pripravený `static/fonts/tesla-katalog-display.woff2` do výstupu. Python,
 FontTools ani nástroje WOFF2 preto na bežný Hugo build nie sú potrebné.
 
+Kompletný katalóg vrátane PDF zaberá približne 3 GB a build vytvorí ďalšiu
+kópiu súborov. Na strojoch s obmedzenou pamäťou nepoužívajte ako cieľ ani ako
+`TMPDIR` RAM-backed `/tmp`; zvoľte adresár na disku. Záťaž možno znížiť
+nastavením `GOMAXPROCS=2 GOGC=40`. PDF v repozitári podliehajú Git LFS;
+po klonovaní treba mať stiahnuté skutočné súbory, nie iba LFS ukazovatele.
+
 ## Dokumentácia a blog
 
 Sekcie `content/docs/` a `content/blog/` používajú natívne šablóny Hextra
@@ -60,6 +66,13 @@ vlastné skúšobné stránky v dočasnej kópii projektu.
 - Interné odkazy v obsahu používajú `relref`, aby fungovali aj pri nasadení
   do podpriečinka. Obrázky a iné verejné súbory patria do `static/`.
 
+Katalóg má desať sekcií a 2 853 typov súčiastok; 58 záznamov puzdier IO
+je samostatných a nie sú započítané medzi typy. Obsah a súbory webu sú v
+`content/docs/katalog/` a `static/katalog/`, takže bežný build nepotrebuje
+susedné archívy. Pri veľkých kategóriách sú detaily vynechané zo sidebaru,
+ale sú dostupné cez zoznamy kategórií a vyhľadávanie. Podrobnosti migrácie,
+porovnania a jeho obmedzenia sú v [AUDIT-KATALOGU.md](AUDIT-KATALOGU.md).
+
 Oba články blogu s názvom „Ukážka“ sú testovací obsah, nie katalógové záznamy.
 
 ### Overenie zmien
@@ -68,10 +81,10 @@ Zostavte web do samostatného adresára, aby ste neprepísali prípadné zmeny v
 `public/`, a overte aj nasadenie pod URL podcestou:
 
 ```sh
-hugo --destination /tmp/opencode/tesla-site-root
-hugo --baseURL https://example.org/tesla/ --destination /tmp/opencode/tesla-site-subpath
-node scripts/test_footer_year.js /tmp/opencode/tesla-site-root
-python3 scripts/test_emoji.py
+GOMAXPROCS=2 GOGC=40 hugo --destination "$HOME/.cache/tesla-site-root"
+GOMAXPROCS=2 GOGC=40 hugo --baseURL https://example.org/tesla/ --destination "$HOME/.cache/tesla-site-subpath"
+node scripts/test_footer_year.js "$HOME/.cache/tesla-site-root"
+TMPDIR="$HOME/.cache" GOMAXPROCS=2 GOGC=40 python3 scripts/test_emoji.py
 ```
 
 Test emoji vytvorí dočasnú kópiu projektu, vloží do nej samostatné skúšobné
@@ -86,7 +99,8 @@ pri podceste. V prehliadači overte indexy a detaily dokumentácie aj blogu,
 menu, vyhľadávanie, obsah stránky, prechody medzi článkami, kopírovanie a RSS.
 Porovnajte mobil a desktop vo svetlom aj tmavom režime; po zmene spoločných
 štýlov skontrolujte aj úvodnú stránku, hlavičku a pätičku. `/tmp/opencode`
-je adresár tohto vývojového prostredia; inde zvoľte vhodný dočasný cieľ.
+je adresár tohto vývojového prostredia; pri RAM-backed `/tmp` zvoľte cieľ
+na disku a ponechajte dosť miesta pre oba výstupy aj dočasnú kópiu testu.
 
 ## Pätička
 

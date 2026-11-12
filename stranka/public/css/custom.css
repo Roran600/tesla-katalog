@@ -195,3 +195,13 @@ main a[class*="text-[color:hsl(var(--primary-hue)"]:hover { color: var(--tesla-h
   --hero-frame-shadow: 0 20px 50px rgba(20, 40, 64, .25);
 }
 @media (prefers-reduced-motion: reduce) { .tesla-hero-cta { transition: none; } }
+/* Catalogue category indexes can contain hundreds of entries. Keep their
+   ordinary Markdown list and reading order, but use available horizontal space. */
+#content .content:has(> h2 #súčiastky) > ul:first-of-type {
+  columns: 12rem;
+  column-gap: 2rem;
+}
+
+#content .content:has(> h2 #súčiastky) > ul:first-of-type > li {
+  break-inside: avoid;
+}
