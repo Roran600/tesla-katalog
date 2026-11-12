@@ -1,4 +1,4 @@
-{{/* Upravené z Hextra v0.13.0: emoji v textových názvoch. */}}
+{{/* Upravené z Hextra v0.13.0: emoji v názvoch a koreň dokumentácie v bočnom menu. */}}
 {{- $context := .context -}}
 
 {{- $disableSidebar := .disableSidebar | default false -}}
@@ -35,6 +35,11 @@
       {{ .context.Store.Set "enableFooterSwitches" true }}
     {{- else -}}
       <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        {{- with site.GetPage "/docs" -}}
+          {{- if eq $navRoot.RelPermalink .RelPermalink -}}
+            <li>{{ template "sidebar-item-link" (dict "active" (eq $pageURL .RelPermalink) "open" false "title" (partial "utils/title" .) "link" .RelPermalink) }}</li>
+          {{- end -}}
+        {{- end -}}
         {{ template "sidebar-main" (dict "context" $navRoot "page" $context  "pageURL" $pageURL) }}
         {{ template "sidebar-footer" }}
       </ul>

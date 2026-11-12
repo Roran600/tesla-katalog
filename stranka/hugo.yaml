@@ -42,7 +42,6 @@ menu:
       params:
         # Špeciálna položka vyhľadávania spracovaná témou Hextra.
         type: search
-
 # Parametre využívané témou Hextra a vlastnými šablónami projektu.
 params:
   # Texty úvodného bloku číta layouts/_shortcodes/tesla-home.html.

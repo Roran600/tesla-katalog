@@ -47,6 +47,10 @@ vlastné skúšobné stránky v dočasnej kópii projektu.
   `.md`. Strom navigácie vychádza zo štruktúry obsahu a poradia `weight`.
   Polia `prev` a `next` vo front matter určujú prechody medzi súčasnými
   dokumentačnými stránkami; pri zmene poradia upravte aj susedné stránky.
+- Desktopový bočný panel zobrazuje koreň `/docs/` nad jeho obsahom vďaka
+  vlastnému partialu `layouts/_partials/sidebar.html`, odvodenému z Hextra
+  0.13.0. Pri aktualizácii témy porovnajte partial s novou verziou. Mobilné
+  menu používa hlavnú navigáciu.
 - Blogový príspevok patrí do `content/blog/`. Front matter môže obsahovať
   `title`, `date`, `description` a `authors`; dátum určuje poradie vo výpise.
 - Pre kontextové menu Hextra s kopírovaním Markdownu nastavte na jednotlivej

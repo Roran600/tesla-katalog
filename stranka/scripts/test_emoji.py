@@ -45,6 +45,10 @@ def main():
         def page(name):
             return (out / name / 'index.html').read_text()
         home, docs, category, item, blog, article = (page(n) for n in ['', 'docs', 'docs/test-emoji', 'docs/test-emoji/ukazka', 'blog', 'blog/ukazka-archivu'])
+        desktop_sidebar = docs.split('<ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">', 1)[1].split('</aside>', 1)[0]
+        assert desktop_sidebar.index('href="/tesla/docs/"') < desktop_sidebar.index('href="/tesla/docs/katalog/"')
+        assert re.search(r'data-active="true"[^>]*>\s*<a[^>]*href="/tesla/docs/"', desktop_sidebar)
+        assert desktop_sidebar.count('href="/tesla/docs/"') == 1
         for text in (home, docs, category, item, blog, article):
             assert 'Značka 🔧 🔧 &lt;b&gt;brand&lt;/b&gt;' in text
             assert 'Menu 🔧 🔧 &lt;b&gt;menu&lt;/b&gt;' in text
