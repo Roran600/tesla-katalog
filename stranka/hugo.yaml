@@ -52,13 +52,13 @@ params:
       link: ""
     # Dve časti hlavného nadpisu a úvodného textu.
     headline:
-      firstLine: "Objavujte súčiastky"
-      secondLine: "a dokumentáciu Tesla"
+      firstLine: "Svet elektronických "
+      secondLine: "súčiastok Tesla"
       # true vloží medzi obe časti pevné zalomenie; false ponechá prirodzené.
       breakLine: true
     subtitle:
-      firstLine: "Prehľadný archív súčiastok a prístrojov"
-      secondLine: "značky Tesla na jednom mieste"
+      firstLine: "Technické údaje, katalógové listy "
+      secondLine: "a dobová dokumentácia na jednom mieste."
     # Hlavné tlačidlo a jeho cieľová cesta.
     cta:
       text: "Prejsť do dokumentácie"
