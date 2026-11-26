@@ -71,7 +71,7 @@ je samostatných a nie sú započítané medzi typy. Obsah a súbory webu sú v
 `content/docs/katalog/` a `static/katalog/`, takže bežný build nepotrebuje
 susedné archívy. Pri veľkých kategóriách sú detaily vynechané zo sidebaru,
 ale sú dostupné cez zoznamy kategórií a vyhľadávanie. Podrobnosti migrácie,
-porovnania a jeho obmedzenia sú v [AUDIT-KATALOGU.md](AUDIT-KATALOGU.md).
+porovnania a jeho obmedzenia sú v [AUDIT-KATALOGU.md](../audit/2026-11-12-stranka/AUDIT-KATALOGU.md).
 
 Oba články blogu s názvom „Ukážka“ sú testovací obsah, nie katalógové záznamy.
 
@@ -117,9 +117,9 @@ hodiny návštevníka môžu zobraziť nesprávny rok. Na overenie logiky spusti
 
 ## Podklady k dizajnu
 
-Priečinok `dizajn/` obsahuje [návrh farebnej schémy](dizajn/navrh-farebnej-schemy.md),
-[samostatnú maketu](dizajn/navrh-farebnej-schemy.html) a jej snímky pre
-[desktop](dizajn/navrh-farieb-desktop.png) a [mobil](dizajn/navrh-farieb-mobil.png).
+Priečinok `grafika/dizajn/` obsahuje [návrh farebnej schémy](../grafika/dizajn/navrh-farebnej-schemy.md),
+[samostatnú maketu](../grafika/dizajn/navrh-farebnej-schemy.html) a jej snímky pre
+[desktop](../grafika/dizajn/navrh-farieb-desktop.png) a [mobil](../grafika/dizajn/navrh-farieb-mobil.png).
 Sú to dokumentačné podklady, nie súčasť Hugo webu ani vstupy jeho zostavenia.
 Maketa používa existujúci katalógový sken z `static/images/`.
 

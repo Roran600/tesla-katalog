@@ -11,6 +11,8 @@ Zálohovať [teslakatalog.cz](https://teslakatalog.cz/) a následne jeho obsah p
 | [`zaloha-data/`](zaloha-data/) | Pôvodná HTTrack záloha webu, vrátane HTML, obrázkov, PDF, cache a logu zrkadlenia. Pozri [README zálohy](zaloha-data/README.md). |
 | [`zaloha-dataset-clean/`](zaloha-dataset-clean/) | Vyčistený a kategorizovaný archívny dataset s Markdown metadátami, skenmi, auditom a manifestom. Pozri [README datasetu](zaloha-dataset-clean/README.md). |
 | [`stranka/`](stranka/) | Samotná Hugo stránka teslakatalógu. Pozri [README stránky](stranka/README.md). |
+| [`grafika/`](grafika/) | Grafické podklady projektu; v [`grafika/dizajn/`](grafika/dizajn/) sú návrhy dizajnu stránky, maketa a jej náhľady. |
+| [`audit/`](audit/) | Miesto na ukladanie auditov informácií a výsledkov porovnávaní; jednotlivé priečinky obsahujú dátum auditu. |
 
 ## Dataset v skratke
 
