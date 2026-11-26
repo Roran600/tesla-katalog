@@ -48,7 +48,7 @@ params:
   home:
     badge:
       # Štítok nad nadpisom; prázdny link znamená neklikateľný štítok.
-      text: "Archív československej elektroniky"
+      text: "Archív československej elektroniky "
       link: ""
     # Dve časti hlavného nadpisu a úvodného textu.
     headline:
