@@ -35,7 +35,7 @@ menu:
       pageRef: /blog
       weight: 2
     - name: O stránke
-      pageRef: /o-stranke
+      pageRef: /blog/o-tejto-stranke
       weight: 3
     - name: Hľadať
       weight: 4
