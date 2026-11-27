@@ -12,7 +12,7 @@ source = Path(sys.argv[1]) / sys.argv[2]
 slug = sys.argv[3]
 output = Path(sys.argv[4])
 assets = Path('static/katalog') / slug
-index_html = (output / 'docs/katalog' / slug / 'index.html').read_text(encoding='utf-8')
+index_html = (output / 'docs' / slug / 'index.html').read_text(encoding='utf-8')
 items = scans = 0
 for index in sorted(source.glob('*/index.md')):
     original = index.read_text(encoding='utf-8')
@@ -20,9 +20,9 @@ for index in sorted(source.glob('*/index.md')):
         continue
     name = index.parent.name.lower()
     title = re.search(r'^title: "(.*)"$', original, re.M).group(1)
-    page_url = f'/tesla/docs/katalog/{slug}/{name}/'
+    page_url = f'/tesla/docs/{slug}/{name}/'
     assert page_url in index_html, page_url
-    html = (output / 'docs/katalog' / slug / name / 'index.html').read_text(encoding='utf-8')
+    html = (output / 'docs' / slug / name / 'index.html').read_text(encoding='utf-8')
     assert title in html, title
     items += 1
     for f in index.parent.iterdir():

@@ -32,7 +32,7 @@ class ContentParser(HTMLParser):
         if text and not self.skip:
             self.items.append(('text', text))
 source = Path(dataset) / category
-root = Path('content/docs/katalog')
+root = Path('content/docs')
 placeholder = root / (slug + '.md')
 content = root / slug
 assets = Path('static/katalog') / slug
@@ -54,7 +54,7 @@ for entry in entries:
         raise SystemExit(f'Unexpected identifier: {entry}')
     page_slug = entry.name.lower()
     body = re.sub(r'^# .*?\n', '', body, count=1).lstrip()
-    body = body.replace(f'[{category}](<../index.md>)', f'[{category}]({{{{< relref "/docs/katalog/{slug}" >}}}})')
+    body = body.replace(f'[{category}](<../index.md>)', f'[{category}]({{{{< relref "/docs/{slug}" >}}}})')
     for label in ('**Označenie:**', '**Popis:**', '**Kľúčové slová:**'):
         body = body.replace('\n' + label, '\n\n' + label, 1)
     # Restore scan-to-edition context, which the processed dataset lists

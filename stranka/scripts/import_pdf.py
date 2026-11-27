@@ -7,7 +7,7 @@ from pathlib import Path
 
 source = Path(sys.argv[1]) / 'Ke stažení'
 target = Path('static/katalog/na-stiahnutie')
-page = Path('content/docs/katalog/na-stiahnutie.md')
+page = Path('content/docs/na-stiahnutie.md')
 if target.exists():
     raise SystemExit('Destination already exists')
 original = (source / 'index.md').read_text(encoding='utf-8')

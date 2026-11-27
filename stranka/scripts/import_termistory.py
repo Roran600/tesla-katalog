@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 source = Path(sys.argv[1]) / "Termistory Pramet"
-content = Path("content/docs/katalog/termistory-pramet")
+content = Path("content/docs/termistory-pramet")
 assets = Path("static/katalog/termistory-pramet")
 entries = sorted(p for p in source.iterdir() if p.is_dir() and (p / "index.md").exists())
 if len(entries) != 24:
@@ -23,7 +23,7 @@ for entry in entries:
     if not re.fullmatch(r"[A-Za-z0-9-]+", title) or title != entry.name:
         raise SystemExit(f"Unexpected identifier: {entry}")
     body = re.sub(r"^# .*?\n", "", body, count=1).lstrip()
-    body = body.replace("[Termistory Pramet](<../index.md>)", '[Termistory Pramet]({{< relref "/docs/katalog/termistory-pramet" >}})')
+    body = body.replace("[Termistory Pramet](<../index.md>)", '[Termistory Pramet]({{< relref "/docs/termistory-pramet" >}})')
     for label in ('**Označenie:**', '**Popis:**', '**Kľúčové slová:**'):
         body = body.replace('\n' + label, '\n\n' + label, 1)
     destination = assets / title.lower()

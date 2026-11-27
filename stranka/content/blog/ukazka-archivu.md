@@ -15,4 +15,4 @@ Tesla katalóg pripravuje prehľad československej elektroniky a súvisiacej do
 
 ## Kam ďalej
 
-Navštívte [úvod katalógu]({{< relref "/docs" >}}) alebo [integrované obvody]({{< relref "/docs/katalog/integrovane-obvody" >}}).
+Navštívte [úvod katalógu]({{< relref "/docs" >}}) alebo [integrované obvody]({{< relref "/docs/integrovane-obvody" >}}).

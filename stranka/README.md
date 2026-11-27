@@ -68,10 +68,12 @@ vlastné skúšobné stránky v dočasnej kópii projektu.
 
 Katalóg má desať sekcií a 2 853 typov súčiastok; 58 záznamov puzdier IO
 je samostatných a nie sú započítané medzi typy. Obsah a súbory webu sú v
-`content/docs/katalog/` a `static/katalog/`, takže bežný build nepotrebuje
+`content/docs/` a `static/katalog/`, takže bežný build nepotrebuje
 susedné archívy. Pri veľkých kategóriách sú detaily vynechané zo sidebaru,
 ale sú dostupné cez zoznamy kategórií a vyhľadávanie. Podrobnosti migrácie,
 porovnania a jeho obmedzenia sú v [AUDIT-KATALOGU.md](../audit/2026-11-12-stranka/AUDIT-KATALOGU.md).
+
+Úvod katalógu je súčasťou `/docs/` a kategórie sú priamo v `content/docs/`.
 
 Oba články blogu s názvom „Ukážka“ sú testovací obsah, nie katalógové záznamy.
 

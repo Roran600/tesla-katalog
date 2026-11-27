@@ -46,13 +46,14 @@ def main():
             return (out / name / 'index.html').read_text()
         home, docs, category, item, blog, article = (page(n) for n in ['', 'docs', 'docs/test-emoji', 'docs/test-emoji/ukazka', 'blog', 'blog/ukazka-archivu'])
         desktop_sidebar = docs.split('<ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">', 1)[1].split('</aside>', 1)[0]
-        assert desktop_sidebar.index('href="/tesla/docs/"') < desktop_sidebar.index('href="/tesla/docs/katalog/"')
+        assert desktop_sidebar.index('href="/tesla/docs/"') < desktop_sidebar.index('href="/tesla/docs/integrovane-obvody/"')
+        assert 'href="/tesla/docs/katalog/"' not in desktop_sidebar
         assert re.search(r'data-active="true"[^>]*>\s*<a[^>]*href="/tesla/docs/"', desktop_sidebar)
         assert desktop_sidebar.count('href="/tesla/docs/"') == 1
         # Catalogue details are excluded from the sidebar: a section with only
         # excluded children must not display a nonfunctional expand button.
         sidebar_item = re.search(
-            r'<div class="hextra-sidebar-item\b[^>]*>\s*<a\b[^>]*href="/tesla/docs/katalog/integrovane-obvody/".*?</div>',
+            r'<div class="hextra-sidebar-item\b[^>]*>\s*<a\b[^>]*href="/tesla/docs/integrovane-obvody/".*?</div>',
             desktop_sidebar, re.S)
         assert sidebar_item, 'catalogue section missing from sidebar'
         assert '<button' not in sidebar_item.group(), 'empty catalogue expander'

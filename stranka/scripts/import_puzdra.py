@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 source = Path(sys.argv[1]) / 'Integrované obvody/Púzdra'
-base = Path('content/docs/katalog/integrovane-obvody')
+base = Path('content/docs/integrovane-obvody')
 content = base / 'puzdra'
 assets = Path('static/katalog/integrovane-obvody/puzdra')
 if content.exists() or assets.exists():
@@ -28,7 +28,7 @@ for entry in entries:
     if not re.fullmatch(r'[a-z0-9-]+', slug):
         raise SystemExit(f'Unexpected package name {entry}')
     body = re.sub(r'^# .*?\n', '', body, count=1).lstrip()
-    body = body.replace('[Integrované obvody](<../../index.md>)', '[Integrované obvody]({{< relref "/docs/katalog/integrovane-obvody" >}})')
+    body = body.replace('[Integrované obvody](<../../index.md>)', '[Integrované obvody]({{< relref "/docs/integrovane-obvody" >}})')
     destination = assets / slug
     destination.mkdir(parents=True)
     for asset in entry.iterdir():
@@ -45,7 +45,7 @@ for entry in entries:
     body = re.sub(r'(?m)^([^\n]*\S) {2,}$', lambda m: m.group(1) + '\\', body)
     body = body.replace('\\\n\n', '\n\n')
     (content / (slug + '.md')).write_text(f'---\n{metadata}\n---\n\n{body}', encoding='utf-8')
-    links.append(f'- [{title}]({{{{< relref "/docs/katalog/integrovane-obvody/puzdra/{slug}" >}}}}) — strana {page}')
+    links.append(f'- [{title}]({{{{< relref "/docs/integrovane-obvody/puzdra/{slug}" >}}}}) — strana {page}')
 (content / '_index.md').write_text('---\ntitle: "Puzdrá IO"\nsidebar:\n  exclude: true\noutputs: [html, rss, markdown]\ncontextMenu: true\n---\n\nPuzdrá sú samostatné záznamy, nie typy súčiastok.\n\n## Puzdrá\n\n' + '\n'.join(links) + '\n', encoding='utf-8')
 with (base / '_index.md').open('a', encoding='utf-8') as f:
     f.write('\n## Puzdrá IO\n\nPuzdrá sú samostatné záznamy, nie typy súčiastok.\n\n' + '\n'.join(links) + '\n')
