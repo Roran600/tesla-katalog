@@ -61,12 +61,12 @@ params:
       secondLine: "a dobová dokumentácia na jednom mieste."
     # Hlavné tlačidlo a jeho cieľová cesta.
     cta:
-      text: "Prejsť do dokumentácie"
+      text: "Katalóg"
       link: "/docs"
     # Druhé tlačidlo a jeho cieľová cesta.
     secondaryCta:
-      text: "Katalóg súčiastok"
-      link: "/docs/"
+      text: "O stránke"
+      link: "/blog/o-tejto-stranke"
       showArrow: true # Šípka v druhom tlačidle.
     # Obrázok je v static/; width a height sú skutočné rozmery zdroja v px.
     image:

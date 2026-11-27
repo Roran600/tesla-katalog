@@ -2,6 +2,6 @@
 title: "Blog"
 ---
 
-Novinky a poznámky k projektu. Nasledujúce príspevky sú ukážkové a slúžia na overenie rozloženia blogu.
+Novinky a poznámky k projektu. Príspevky označené ako ukážkové slúžia na overenie rozloženia blogu.
 
 [RSS kanál]({{< relref "/blog" >}}index.xml)
